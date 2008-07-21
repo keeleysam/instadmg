@@ -1,0 +1,1944 @@
+07-08-21
+Creating disk image
+Image mounted at /dev/disk2
+07-08-21
+Beginning Installation from /Volumes/Mac
+installer: Error the package path specified was invalid: '/Volumes/Mac/System/Installation/Packages/OSInstall.mpkg'.
+07-08-21
+Creating disk image
+Image mounted at /dev/disk2
+07-08-21
+Beginning Installation from /Volumes/Mac
+installer: Error the package path specified was invalid: '/Volumes/Mac/System/Installation/Packages/OSInstall.mpkg'.
+07-08-21
+Creating disk image
+Image mounted at /dev/disk2
+07-08-21
+Beginning Installation from /Volumes/Mac OS X Install DVD
+07-08-21
+Creating disk image
+Image mounted at /dev/disk2
+07-08-21
+Beginning Installation from /Volumes/Mac OS X Install DVD
+installer: Package name is Mac OS X
+installer: Installing onto volume mounted at /Volumes/InstaDMG.
+installer: Preparing for installation.....
+installer: Preparing the Disk.....
+installer: 	Preparing Target Volume
+#
+installer: Preparing Mac OS X.....
+installer: 	Running Mac OS X Installer script
+installer: 	Running Base System Part 1 Installer script
+installer: 	Running Essentials Installer script
+installer: 	Running BSD Subsystem Installer script
+#
+installer: 	Running Additional Essentials Installer script
+installer: 	Running Migration Assistant Installer script
+installer: 	Running iTunes Installer script
+#
+installer: Installing Base System Part 1.....
+installer: 	
+installer: 	Configuring Installation
+###
+installer: 	Running Installer Script
+installer: 	Writing files
+#
+installer: 	Writing files: 0% Completed
+#
+installer: 	Writing files: 1% Completed
+#
+installer: 	Writing files: 1% Completed
+installer: 	Writing files: 2% Completed
+#
+installer: 	Writing files: 2% Completed
+#
+installer: 	Writing files: 2% Completed
+#
+installer: 	Writing files: 3% Completed
+#
+installer: 	Writing files: 3% Completed
+#
+installer: 	Writing files: 4% Completed
+#
+installer: 	Writing files: 4% Completed
+#
+installer: 	Writing files: 4% Completed
+#
+installer: 	Writing files: 5% Completed
+#
+installer: 	Writing files: 5% Completed
+#
+installer: 	Writing files: 6% Completed
+#
+installer: 	Writing files: 6% Completed
+#
+installer: 	Writing files: 7% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 10% Completed
+#
+installer: 	Writing files: 11% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 13% Completed
+#
+installer: 	Writing files: 13% Completed
+#
+installer: 	Writing files: 13% Completed
+#
+installer: 	Writing files: 14% Completed
+#
+installer: 	Writing files: 14% Completed
+#
+installer: 	Writing files: 14% Completed
+#
+installer: 	Writing files: 15% Completed
+#
+installer: 	Writing files: 16% Completed
+#
+installer: 	Writing files: 17% Completed
+#
+installer: 	Writing files: 19% Completed
+#
+installer: 	Writing files: 19% Completed
+#
+installer: 	Writing files: 20% Completed
+#
+installer: 	Writing files: 21% Completed
+#
+installer: 	Writing files: 22% Completed
+#
+installer: 	Writing files: 23% Completed
+#
+installer: 	Writing files: 24% Completed
+#
+installer: 	Writing files: 25% Completed
+#
+installer: 	Writing files: 26% Completed
+#07-08-21
+Creating disk image
+Image mounted at /dev/disk2
+07-08-21
+Beginning Installation from /Volumes/Mac OS X Install DVD
+installer: Package name is Mac OS X
+installer: Installing onto volume mounted at /Volumes/InstaDMG.
+installer:PHASE:Preparing for installation
+installer:PHASE:Preparing the Disk
+installer:STATUS:Preparing Target Volume
+installer:%0.010000
+installer:PHASE:Preparing Mac OS X
+installer:STATUS:Running Mac OS X Installer script
+installer:STATUS:Running Base System Part 1 Installer script
+installer:STATUS:Running Essentials Installer script
+installer:STATUS:Running BSD Subsystem Installer script
+installer:STATUS:Running Additional Essentials Installer script
+installer:STATUS:Running Migration Assistant Installer script
+installer:STATUS:Running iTunes Installer script
+installer:%0.034000
+installer:PHASE:Installing Base System Part 1
+installer:STATUS:
+installer:STATUS:Configuring Installation
+installer:%0.035005
+installer:%0.044851
+installer:STATUS:Running Installer Script
+installer:STATUS:Writing files
+installer:%0.048373
+installer:STATUS:Writing files: 0% Completed
+installer:%0.048684
+installer:STATUS:Writing files: 1% Completed
+installer:%0.048980
+installer:STATUS:Writing files: 1% Completed
+installer:%0.049185
+installer:STATUS:Writing files: 1% Completed
+installer:%0.049289
+installer:STATUS:Writing files: 2% Completed
+installer:%0.049542
+installer:STATUS:Writing files: 2% Completed
+installer:%0.049722
+installer:STATUS:Writing files: 2% Completed
+installer:%0.049987
+installer:STATUS:Writing files: 3% Completed
+installer:%0.050319
+installer:STATUS:Writing files: 3% Completed
+installer:%0.050539
+installer:STATUS:Writing files: 4% Completed
+installer:%0.050824
+installer:STATUS:Writing files: 4% Completed
+installer:%0.051078
+installer:STATUS:Writing files: 5% Completed
+installer:%0.051297
+installer:STATUS:Writing files: 5% Completed
+installer:%0.051615
+installer:STATUS:Writing files: 6% Completed
+installer:%0.052087
+installer:STATUS:Writing files: 6% Completed
+07-08-21
+Creating disk image
+Image mounted at /dev/disk2
+07-08-21
+Beginning Installation from /Volumes/Mac OS X Install DVD
+installer: Package name is Mac OS X
+installer: Installing onto volume mounted at /Volumes/InstaDMG.
+installer: Preparing for installation.....
+installer: Preparing the Disk.....
+installer: 	Preparing Target Volume
+#
+installer: Preparing Mac OS X.....
+installer: 	Running Mac OS X Installer script
+installer: 	Running Base System Part 1 Installer script
+installer: 	Running Essentials Installer script
+installer: 	Running BSD Subsystem Installer script
+installer: 	Running Additional Essentials Installer script
+installer: 	Running Migration Assistant Installer script
+installer: 	Running iTunes Installer script
+#
+installer: Installing Base System Part 1.....
+installer: 	
+installer: 	Configuring Installation
+###
+installer: 	Running Installer Script
+installer: 	Writing files
+#
+installer: 	Writing files: 0% Completed
+installer: 	Writing files: 1% Completed
+#
+installer: 	Writing files: 1% Completed
+#
+installer: 	Writing files: 1% Completed
+#
+installer: 	Writing files: 2% Completed
+#
+installer: 	Writing files: 2% Completed
+#
+installer: 	Writing files: 2% Completed
+#
+installer: 	Writing files: 3% Completed
+#
+installer: 	Writing files: 3% Completed
+#
+installer: 	Writing files: 4% Completed
+#
+installer: 	Writing files: 4% Completed
+#
+installer: 	Writing files: 5% Completed
+#
+installer: 	Writing files: 5% Completed
+#
+installer: 	Writing files: 6% Completed
+#
+installer: 	Writing files: 6% Completed
+#
+installer: 	Writing files: 7% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 10% Completed
+#
+installer: 	Writing files: 11% Completed
+#
+installer: 	Writing files: 11% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 13% Completed
+#
+installer: 	Writing files: 13% Completed
+#
+installer: 	Writing files: 13% Completed
+#
+installer: 	Writing files: 14% Completed
+#
+installer: 	Writing files: 14% Completed
+#
+installer: 	Writing files: 14% Completed
+#
+installer: 	Writing files: 15% Completed
+#
+installer: 	Writing files: 16% Completed
+#
+installer: 	Writing files: 17% Completed
+#
+installer: 	Writing files: 19% Completed
+#
+installer: 	Writing files: 19% Completed
+#
+installer: 	Writing files: 20% Completed
+#
+installer: 	Writing files: 21% Completed
+#
+installer: 	Writing files: 22% Completed
+#
+installer: 	Writing files: 23% Completed
+#
+installer: 	Writing files: 23% Completed
+#
+installer: 	Writing files: 24% Completed
+#
+installer: 	Writing files: 26% Completed
+#
+installer: 	Writing files: 26% Completed
+#
+installer: 	Writing files: 27% Completed
+#
+installer: 	Writing files: 28% Completed
+#
+installer: 	Writing files: 29% Completed
+#
+installer: 	Writing files: 30% Completed
+#
+installer: 	Writing files: 31% Completed
+#
+installer: 	Writing files: 33% Completed
+#
+installer: 	Writing files: 34% Completed
+#
+installer: 	Writing files: 36% Completed
+#
+installer: 	Writing files: 37% Completed
+#
+installer: 	Writing files: 38% Completed
+#
+installer: 	Writing files: 39% Completed
+#
+installer: 	Writing files: 40% Completed
+#
+installer: 	Writing files: 41% Completed
+#
+installer: 	Writing files: 42% Completed
+#
+installer: 	Writing files: 43% Completed
+#
+installer: 	Writing files: 44% Completed
+installer: 	Writing files: 45% Completed
+#
+installer: 	Writing files: 45% Completed
+#
+installer: 	Writing files: 45% Completed
+#
+installer: 	Writing files: 46% Completed
+#
+installer: 	Writing files: 47% Completed
+#
+installer: 	Writing files: 47% Completed
+#
+installer: 	Writing files: 48% Completed
+#
+installer: 	Writing files: 48% Completed
+#
+installer: 	Writing files: 50% Completed
+#
+installer: 	Writing files: 50% Completed
+#
+installer: 	Writing files: 52% Completed
+#
+installer: 	Writing files: 52% Completed
+#
+installer: 	Writing files: 53% Completed
+#
+installer: 	Writing files: 54% Completed
+#
+installer: 	Writing files: 54% Completed
+#
+installer: 	Writing files: 55% Completed
+#
+installer: 	Writing files: 55% Completed
+#
+installer: 	Writing files: 56% Completed
+#
+installer: 	Writing files: 57% Completed
+#
+installer: 	Writing files: 59% Completed
+#
+installer: 	Writing files: 60% Completed
+#
+installer: 	Writing files: 60% Completed
+#
+installer: 	Writing files: 61% Completed
+#
+installer: 	Writing files: 62% Completed
+#
+installer: 	Writing files: 62% Completed
+installer: 	Writing files: 63% Completed
+#
+installer: 	Writing files: 63% Completed
+#
+installer: 	Writing files: 64% Completed
+#
+installer: 	Writing files: 64% Completed
+#
+installer: 	Writing files: 66% Completed
+#
+installer: 	Writing files: 66% Completed
+#
+installer: 	Writing files: 67% Completed
+#
+installer: 	Writing files: 67% Completed
+#
+installer: 	Writing files: 68% Completed
+#
+installer: 	Writing files: 69% Completed
+#
+installer: 	Writing files: 70% Completed
+#
+installer: 	Writing files: 71% Completed
+#
+installer: 	Writing files: 72% Completed
+#
+installer: 	Writing files: 73% Completed
+#
+installer: 	Writing files: 74% Completed
+#
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 76% Completed
+#
+installer: 	Writing files: 76% Completed
+#
+installer: 	Writing files: 77% Completed
+#
+installer: 	Writing files: 78% Completed
+#
+installer: 	Writing files: 79% Completed
+#
+installer: 	Writing files: 79% Completed
+#
+installer: 	Writing files: 80% Completed
+#
+installer: 	Writing files: 80% Completed
+#
+installer: 	Writing files: 81% Completed
+#
+installer: 	Writing files: 81% Completed
+#
+installer: 	Writing files: 82% Completed
+#
+installer: 	Writing files: 83% Completed
+#
+installer: 	Writing files: 83% Completed
+#
+installer: 	Writing files: 84% Completed
+#
+installer: 	Writing files: 84% Completed
+#
+installer: 	Writing files: 84% Completed
+#
+installer: 	Writing files: 85% Completed
+#
+installer: 	Writing files: 86% Completed
+#
+installer: 	Writing files: 86% Completed
+#
+installer: 	Writing files: 86% Completed
+#
+installer: 	Writing files: 87% Completed
+#
+installer: 	Writing files: 87% Completed
+#
+installer: 	Writing files: 87% Completed
+#
+installer: 	Writing files: 88% Completed
+#
+installer: 	Writing files: 88% Completed
+#
+installer: 	Writing files: 88% Completed
+#
+installer: 	Writing files: 88% Completed
+#
+installer: 	Writing files: 89% Completed
+#
+installer: 	Writing files: 89% Completed
+#
+installer: 	Writing files: 90% Completed
+#
+installer: 	Writing files: 90% Completed
+#
+installer: 	Writing files: 90% Completed
+installer: 	Writing files: 91% Completed
+#
+installer: 	Writing files: 91% Completed
+#
+installer: 	Writing files: 91% Completed
+#
+installer: 	Writing files: 92% Completed
+#
+installer: 	Writing files: 93% Completed
+#
+installer: 	Writing files: 93% Completed
+#
+installer: 	Writing files: 93% Completed
+#
+installer: 	Writing files: 94% Completed
+#
+installer: 	Writing files: 95% Completed
+#
+installer: 	Writing files: 96% Completed
+#
+installer: 	Writing files: 97% Completed
+#
+installer: 	Writing files: 97% Completed
+#
+installer: 	Writing files: 98% Completed
+#
+installer: 	Writing files: 98% Completed
+#
+installer: 	Writing files: 98% Completed
+#
+installer: 	Writing files: 99% Completed
+#
+installer: 	Writing files: 99% Completed
+#
+installer: 	Writing files: 99% Completed
+#
+installer: 	Writing files: 99% Completed
+#
+installer: 	Writing files: 100% Completed
+#
+installer: 	Writing files: 100% Completed
+#
+installer: 	Running Installer Script
+installer: 	Writing package receipt
+#
+installer: Installing Essentials.....
+installer: 	
+installer: 	Configuring Installation
+#######
+installer: 	Running Installer Script
+installer: 	Writing files
+#
+installer: 	Writing files: 0% Completed
+#
+installer: 	Writing files: 1% Completed
+#
+installer: 	Writing files: 2% Completed
+#
+installer: 	Writing files: 2% Completed
+#
+installer: 	Writing files: 3% Completed
+#
+installer: 	Writing files: 4% Completed
+#
+installer: 	Writing files: 4% Completed
+#
+installer: 	Writing files: 5% Completed
+installer: 	Writing files: 6% Completed
+#
+installer: 	Writing files: 6% Completed
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 9% Completed
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 10% Completed
+#
+installer: 	Writing files: 11% Completed
+#
+installer: 	Writing files: 11% Completed
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 13% Completed
+#
+installer: 	Writing files: 14% Completed
+#
+installer: 	Writing files: 15% Completed
+#
+installer: 	Writing files: 16% Completed
+#
+installer: 	Writing files: 16% Completed
+#
+installer: 	Writing files: 18% Completed
+#
+installer: 	Writing files: 18% Completed
+#
+installer: 	Writing files: 18% Completed
+#
+installer: 	Writing files: 19% Completed
+#
+installer: 	Writing files: 20% Completed
+#
+installer: 	Writing files: 21% Completed
+#
+installer: 	Writing files: 22% Completed
+#
+installer: 	Writing files: 22% Completed
+#
+installer: 	Writing files: 24% Completed
+#
+installer: 	Writing files: 26% Completed
+#
+installer: 	Writing files: 27% Completed
+#
+installer: 	Writing files: 28% Completed
+#
+installer: 	Writing files: 28% Completed
+#
+installer: 	Writing files: 29% Completed
+#
+installer: 	Writing files: 29% Completed
+#
+installer: 	Writing files: 30% Completed
+#
+installer: 	Writing files: 31% Completed
+#
+installer: 	Writing files: 31% Completed
+#
+installer: 	Writing files: 32% Completed
+#
+installer: 	Writing files: 32% Completed
+#
+installer: 	Writing files: 32% Completed
+#
+installer: 	Writing files: 33% Completed
+#
+installer: 	Writing files: 34% Completed
+#
+installer: 	Writing files: 35% Completed
+#
+installer: 	Writing files: 35% Completed
+#
+installer: 	Writing files: 36% Completed
+#
+installer: 	Writing files: 36% Completed
+#
+installer: 	Writing files: 37% Completed
+#
+installer: 	Writing files: 37% Completed
+#
+installer: 	Writing files: 38% Completed
+#
+installer: 	Writing files: 38% Completed
+#
+installer: 	Writing files: 39% Completed
+#
+installer: 	Writing files: 39% Completed
+#
+installer: 	Writing files: 40% Completed
+#
+installer: 	Writing files: 40% Completed
+#
+installer: 	Writing files: 41% Completed
+#
+installer: 	Writing files: 41% Completed
+#
+installer: 	Writing files: 43% Completed
+#
+installer: 	Writing files: 44% Completed
+#
+installer: 	Writing files: 45% Completed
+#
+installer: 	Writing files: 45% Completed
+#
+installer: 	Writing files: 46% Completed
+#
+installer: 	Writing files: 47% Completed
+#
+installer: 	Writing files: 48% Completed
+#
+installer: 	Writing files: 48% Completed
+#
+installer: 	Writing files: 49% Completed
+#
+installer: 	Writing files: 49% Completed
+#
+installer: 	Writing files: 49% Completed
+#
+installer: 	Writing files: 50% Completed
+#
+installer: 	Writing files: 51% Completed
+#
+installer: 	Writing files: 52% Completed
+#
+installer: 	Writing files: 53% Completed
+#
+installer: 	Writing files: 54% Completed
+#
+installer: 	Writing files: 55% Completed
+#
+installer: 	Writing files: 55% Completed
+#
+installer: 	Writing files: 57% Completed
+#
+installer: 	Writing files: 57% Completed
+#
+installer: 	Writing files: 58% Completed
+#
+installer: 	Writing files: 58% Completed
+#
+installer: 	Writing files: 58% Completed
+#
+installer: 	Writing files: 59% Completed
+#
+installer: 	Writing files: 59% Completed
+#
+installer: 	Writing files: 60% Completed
+#
+installer: 	Writing files: 60% Completed
+installer: 	Writing files: 62% Completed
+#
+installer: 	Writing files: 63% Completed
+#
+installer: 	Writing files: 63% Completed
+#
+installer: 	Writing files: 64% Completed
+installer: 	Writing files: 65% Completed
+#
+installer: 	Writing files: 65% Completed
+installer: 	Writing files: 65% Completed
+#
+installer: 	Writing files: 67% Completed
+#
+installer: 	Writing files: 67% Completed
+#
+installer: 	Writing files: 67% Completed
+#
+installer: 	Writing files: 68% Completed
+#
+installer: 	Writing files: 68% Completed
+#
+installer: 	Writing files: 69% Completed
+#
+installer: 	Writing files: 69% Completed
+#
+installer: 	Writing files: 70% Completed
+#
+installer: 	Writing files: 70% Completed
+#
+installer: 	Writing files: 72% Completed
+#
+installer: 	Writing files: 72% Completed
+installer: 	Writing files: 73% Completed
+#
+installer: 	Writing files: 73% Completed
+#
+installer: 	Writing files: 73% Completed
+#
+installer: 	Writing files: 74% Completed
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 76% Completed
+#
+installer: 	Writing files: 77% Completed
+#
+installer: 	Writing files: 78% Completed
+installer: 	Writing files: 78% Completed
+#
+installer: 	Writing files: 79% Completed
+#
+installer: 	Writing files: 79% Completed
+#
+installer: 	Writing files: 80% Completed
+#
+installer: 	Writing files: 80% Completed
+#
+installer: 	Writing files: 81% Completed
+#
+installer: 	Writing files: 81% Completed
+#
+installer: 	Writing files: 83% Completed
+#
+installer: 	Writing files: 83% Completed
+#
+installer: 	Writing files: 83% Completed
+#
+installer: 	Writing files: 84% Completed
+#
+installer: 	Writing files: 85% Completed
+#
+installer: 	Writing files: 86% Completed
+#
+installer: 	Writing files: 87% Completed
+installer: 	Writing files: 87% Completed
+#
+installer: 	Writing files: 88% Completed
+#
+installer: 	Writing files: 88% Completed
+#
+installer: 	Writing files: 89% Completed
+installer: 	Writing files: 89% Completed
+#
+installer: 	Writing files: 89% Completed
+#
+installer: 	Writing files: 90% Completed
+#
+installer: 	Writing files: 90% Completed
+#
+installer: 	Writing files: 91% Completed
+#
+installer: 	Writing files: 91% Completed
+#
+installer: 	Writing files: 91% Completed
+installer: 	Writing files: 92% Completed
+#
+installer: 	Writing files: 93% Completed
+#
+installer: 	Writing files: 93% Completed
+#
+installer: 	Writing files: 94% Completed
+#
+installer: 	Writing files: 95% Completed
+#
+installer: 	Writing files: 95% Completed
+#
+installer: 	Writing files: 96% Completed
+#
+installer: 	Writing files: 97% Completed
+#
+installer: 	Writing files: 97% Completed
+#
+installer: 	Writing files: 98% Completed
+#
+installer: 	Writing files: 99% Completed
+installer: 	Writing files: 99% Completed
+#
+installer: 	Writing files: 99% Completed
+#
+installer: 	Running Installer Script
+installer: 	Writing package receipt
+#
+installer: Installing BSD Subsystem.....
+installer: 	
+installer: 	Configuring Installation
+########
+installer: 	Writing files
+#
+installer: 	Writing files: 1% Completed
+#
+installer: 	Writing files: 6% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 11% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 14% Completed
+#
+installer: 	Writing files: 14% Completed
+#
+installer: 	Writing files: 16% Completed
+#
+installer: 	Writing files: 16% Completed
+#
+installer: 	Writing files: 17% Completed
+#
+installer: 	Writing files: 19% Completed
+#
+installer: 	Writing files: 21% Completed
+installer: 	Writing files: 22% Completed
+#
+installer: 	Writing files: 25% Completed
+#
+installer: 	Writing files: 27% Completed
+#
+installer: 	Writing files: 28% Completed
+#
+installer: 	Writing files: 29% Completed
+#
+installer: 	Writing files: 33% Completed
+#
+installer: 	Writing files: 35% Completed
+installer: 	Writing files: 38% Completed
+#
+installer: 	Writing files: 40% Completed
+#
+installer: 	Writing files: 43% Completed
+installer: 	Writing files: 47% Completed
+#
+installer: 	Writing files: 47% Completed
+#
+installer: 	Writing files: 49% Completed
+#
+installer: 	Writing files: 50% Completed
+#
+installer: 	Writing files: 52% Completed
+#
+installer: 	Writing files: 53% Completed
+#
+installer: 	Writing files: 54% Completed
+installer: 	Writing files: 55% Completed
+#
+installer: 	Writing files: 55% Completed
+#
+installer: 	Writing files: 56% Completed
+#
+installer: 	Writing files: 59% Completed
+#
+installer: 	Writing files: 59% Completed
+#
+installer: 	Writing files: 63% Completed
+#
+installer: 	Writing files: 65% Completed
+#
+installer: 	Writing files: 68% Completed
+#
+installer: 	Writing files: 70% Completed
+#
+installer: 	Writing files: 71% Completed
+installer: 	Writing files: 74% Completed
+#
+installer: 	Writing files: 74% Completed
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 76% Completed
+installer: 	Writing files: 77% Completed
+#
+installer: 	Writing files: 79% Completed
+installer: 	Writing files: 82% Completed
+#
+installer: 	Writing files: 87% Completed
+#
+installer: 	Writing files: 88% Completed
+#
+installer: 	Writing files: 90% Completed
+#
+installer: 	Writing files: 91% Completed
+#
+installer: 	Writing files: 91% Completed
+#
+installer: 	Writing files: 91% Completed
+#
+installer: 	Writing files: 92% Completed
+#
+installer: 	Writing files: 93% Completed
+#
+installer: 	Writing files: 94% Completed
+#
+installer: 	Writing files: 96% Completed
+#
+installer: 	Writing files: 97% Completed
+#
+installer: 	Writing files: 97% Completed
+#
+installer: 	Writing files: 99% Completed
+#
+installer: 	Writing package receipt
+#
+installer: Installing Additional Essentials.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 7% Completed
+installer: 	Writing files: 19% Completed
+#
+installer: 	Writing files: 19% Completed
+#
+installer: 	Writing files: 31% Completed
+#
+installer: 	Writing files: 45% Completed
+#
+installer: 	Writing files: 50% Completed
+#
+installer: 	Writing files: 59% Completed
+#
+installer: 	Writing files: 69% Completed
+#
+installer: 	Writing files: 73% Completed
+installer: 	Writing files: 78% Completed
+#
+installer: 	Writing files: 87% Completed
+#
+installer: 	Writing files: 97% Completed
+#
+installer: 	Writing package receipt
+installer: Installing Additional Speech Voices.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 18% Completed
+#
+installer: 	Writing files: 33% Completed
+installer: 	Writing files: 44% Completed
+#
+installer: 	Writing files: 56% Completed
+#
+installer: 	Writing files: 70% Completed
+#
+installer: 	Writing files: 83% Completed
+#
+installer: 	Writing files: 97% Completed
+installer: 	Writing package receipt
+#
+installer: Installing Asian Languages Support.....
+installer: 	
+installer: 	Configuring Installation
+installer: 	Writing files
+#
+installer: 	Writing files: 11% Completed
+installer: 	Writing files: 20% Completed
+#
+installer: 	Writing files: 23% Completed
+#
+installer: 	Writing files: 27% Completed
+#
+installer: 	Writing files: 32% Completed
+#
+installer: 	Writing files: 40% Completed
+#
+installer: 	Writing files: 45% Completed
+#
+installer: 	Writing files: 53% Completed
+installer: 	Writing files: 59% Completed
+#
+installer: 	Writing files: 62% Completed
+#
+installer: 	Writing files: 70% Completed
+#
+installer: 	Writing files: 81% Completed
+installer: 	Writing files: 92% Completed
+#
+installer: 	Writing files: 96% Completed
+installer: 	Writing files: 98% Completed
+#
+installer: 	Writing package receipt
+#
+installer: Installing Media Files.....
+installer: 	
+installer: 	Configuring Installation
+installer: 	Writing files
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 14% Completed
+#
+installer: 	Writing files: 19% Completed
+#
+installer: 	Writing files: 30% Completed
+#
+installer: 	Writing files: 36% Completed
+#
+installer: 	Writing files: 43% Completed
+installer: 	Writing files: 52% Completed
+#
+installer: 	Writing files: 61% Completed
+#
+installer: 	Writing files: 69% Completed
+#
+installer: 	Writing files: 78% Completed
+#
+installer: 	Writing files: 87% Completed
+#
+installer: 	Writing files: 97% Completed
+installer: 	Writing package receipt
+#
+installer: Installing Migration Assistant.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 17% Completed
+#
+installer: 	Writing files: 25% Completed
+#
+installer: 	Writing files: 46% Completed
+installer: 	Writing files: 68% Completed
+#
+installer: 	Writing files: 84% Completed
+#
+installer: 	Writing files: 88% Completed
+#
+installer: 	Writing package receipt
+installer: Installing Mail.....
+installer: 	
+installer: 	Configuring Installation
+##
+installer: 	Writing files
+#
+installer: 	Writing files: 13% Completed
+#
+installer: 	Writing files: 26% Completed
+#
+installer: 	Writing files: 30% Completed
+#
+installer: 	Writing files: 43% Completed
+#
+installer: 	Writing files: 48% Completed
+#
+installer: 	Writing files: 67% Completed
+#
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 87% Completed
+#
+installer: 	Writing files: 93% Completed
+#
+installer: 	Writing package receipt
+installer: Installing Address Book.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 17% Completed
+#
+installer: 	Writing files: 42% Completed
+installer: 	Writing files: 53% Completed
+#
+installer: 	Writing files: 80% Completed
+#
+installer: 	Writing files: 92% Completed
+#
+installer: 	Writing package receipt
+installer: Installing iCal.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 36% Completed
+#
+installer: 	Writing files: 46% Completed
+#
+installer: 	Writing files: 58% Completed
+#
+installer: 	Writing files: 73% Completed
+#
+installer: 	Writing files: 91% Completed
+#
+installer: 	Writing package receipt
+installer: Installing Automator.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 20% Completed
+#
+installer: 	Writing files: 54% Completed
+#
+installer: 	Writing files: 78% Completed
+#
+installer: 	Writing package receipt
+installer: Installing iTunes.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 12% Completed
+installer: 	Writing files: 23% Completed
+#
+installer: 	Writing files: 33% Completed
+#
+installer: 	Writing files: 40% Completed
+#
+installer: 	Writing files: 48% Completed
+installer: 	Writing files: 57% Completed
+#
+installer: 	Writing files: 65% Completed
+installer: 	Writing files: 74% Completed
+#
+installer: 	Writing files: 86% Completed
+installer: 	Writing files: 97% Completed
+#
+installer: 	Writing files: 98% Completed
+installer: 	Writing package receipt
+installer: Installing iChat.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 34% Completed
+#
+installer: 	Writing files: 40% Completed
+installer: 	Writing files: 59% Completed
+#
+installer: 	Writing files: 71% Completed
+#
+installer: 	Writing files: 84% Completed
+#
+installer: 	Writing package receipt
+installer: Installing Java.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 6% Completed
+#
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 14% Completed
+#
+installer: 	Writing files: 16% Completed
+#
+installer: 	Writing files: 17% Completed
+#
+installer: 	Writing files: 24% Completed
+#
+installer: 	Writing files: 26% Completed
+#
+installer: 	Writing files: 28% Completed
+installer: 	Writing files: 32% Completed
+#
+installer: 	Writing files: 35% Completed
+#
+installer: 	Writing files: 37% Completed
+#
+installer: 	Writing files: 41% Completed
+#
+installer: 	Writing files: 42% Completed
+#
+installer: 	Writing files: 43% Completed
+#
+installer: 	Writing files: 46% Completed
+#
+installer: 	Writing files: 48% Completed
+#
+installer: 	Writing files: 53% Completed
+#
+installer: 	Writing files: 54% Completed
+#
+installer: 	Writing files: 59% Completed
+#
+installer: 	Writing files: 62% Completed
+#
+installer: 	Writing files: 65% Completed
+#
+installer: 	Writing files: 67% Completed
+#
+installer: 	Writing files: 68% Completed
+#
+installer: 	Writing files: 69% Completed
+#
+installer: 	Writing files: 71% Completed
+#
+installer: 	Writing files: 73% Completed
+#
+installer: 	Writing files: 74% Completed
+#
+installer: 	Writing files: 78% Completed
+#
+installer: 	Writing files: 82% Completed
+#
+installer: 	Writing files: 88% Completed
+#
+installer: 	Writing files: 92% Completed
+installer: 	Writing files: 95% Completed
+#
+installer: 	Writing files: 97% Completed
+#
+installer: 	Writing package receipt
+#
+installer: Installing Safari.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 17% Completed
+#
+installer: 	Writing files: 41% Completed
+installer: 	Writing files: 79% Completed
+#
+installer: 	Writing files: 86% Completed
+#
+installer: 	Writing package receipt
+installer: Installing Oxford Dictionaries.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 6% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 16% Completed
+#
+installer: 	Writing files: 19% Completed
+#
+installer: 	Writing files: 25% Completed
+#
+installer: 	Writing files: 27% Completed
+installer: 	Writing files: 32% Completed
+#
+installer: 	Writing files: 35% Completed
+#
+installer: 	Writing files: 38% Completed
+#
+installer: 	Writing files: 42% Completed
+#
+installer: 	Writing files: 43% Completed
+#
+installer: 	Writing files: 46% Completed
+#
+installer: 	Writing files: 49% Completed
+#
+installer: 	Writing files: 55% Completed
+#
+installer: 	Writing files: 59% Completed
+#
+installer: 	Writing files: 61% Completed
+#
+installer: 	Writing files: 63% Completed
+#
+installer: 	Writing files: 66% Completed
+#
+installer: 	Writing files: 69% Completed
+#
+installer: 	Writing files: 71% Completed
+installer: 	Writing files: 74% Completed
+#
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 78% Completed
+#
+installer: 	Writing files: 81% Completed
+installer: 	Writing files: 84% Completed
+#
+installer: 	Writing files: 91% Completed
+#
+installer: 	Writing files: 91% Completed
+#
+installer: 	Writing files: 93% Completed
+#
+installer: 	Writing files: 96% Completed
+installer: 	Writing package receipt
+#
+installer: Installing Brother Printer Drivers.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 35% Completed
+#
+installer: 	Writing files: 45% Completed
+#
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 81% Completed
+#
+installer: 	Writing files: 94% Completed
+#
+installer: 	Writing package receipt
+installer: Installing Canon Printer Drivers.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 4% Completed
+#
+installer: 	Writing files: 8% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 16% Completed
+#
+installer: 	Writing files: 19% Completed
+#
+installer: 	Writing files: 22% Completed
+#
+installer: 	Writing files: 26% Completed
+#
+installer: 	Writing files: 29% Completed
+#
+installer: 	Writing files: 31% Completed
+#
+installer: 	Writing files: 35% Completed
+#
+installer: 	Writing files: 38% Completed
+#
+installer: 	Writing files: 41% Completed
+#
+installer: 	Writing files: 44% Completed
+#
+installer: 	Writing files: 47% Completed
+installer: 	Writing files: 49% Completed
+#
+installer: 	Writing files: 51% Completed
+#
+installer: 	Writing files: 51% Completed
+#
+installer: 	Writing files: 55% Completed
+#
+installer: 	Writing files: 59% Completed
+#
+installer: 	Writing files: 63% Completed
+#
+installer: 	Writing files: 65% Completed
+#
+installer: 	Writing files: 67% Completed
+#
+installer: 	Writing files: 69% Completed
+#
+installer: 	Writing files: 73% Completed
+#
+installer: 	Writing files: 76% Completed
+#
+installer: 	Writing files: 79% Completed
+#
+installer: 	Writing files: 82% Completed
+#
+installer: 	Writing files: 85% Completed
+#
+installer: 	Writing files: 89% Completed
+installer: 	Writing files: 92% Completed
+#
+installer: 	Writing files: 95% Completed
+#
+installer: 	Writing package receipt
+#
+installer: Installing Electronics For Imaging Printer Drivers.....
+installer: 	
+installer: 	Configuring Installation
+installer: 	Writing files
+#
+installer: 	Writing files: 27% Completed
+installer: 	Writing files: 45% Completed
+#
+installer: 	Writing files: 59% Completed
+#
+installer: 	Writing files: 88% Completed
+#
+installer: 	Writing package receipt
+installer: Installing Epson Printer Drivers.....
+installer: 	
+installer: 	Configuring Installation
+####
+installer: 	Writing files
+#
+installer: 	Writing files: 1% Completed
+#
+installer: 	Writing files: 2% Completed
+#
+installer: 	Writing files: 2% Completed
+#
+installer: 	Writing files: 3% Completed
+#
+installer: 	Writing files: 4% Completed
+#
+installer: 	Writing files: 5% Completed
+installer: 	Writing files: 5% Completed
+#
+installer: 	Writing files: 6% Completed
+#
+installer: 	Writing files: 7% Completed
+#
+installer: 	Writing files: 8% Completed
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 10% Completed
+#
+installer: 	Writing files: 11% Completed
+#
+installer: 	Writing files: 11% Completed
+#
+installer: 	Writing files: 13% Completed
+#
+installer: 	Writing files: 14% Completed
+#
+installer: 	Writing files: 14% Completed
+#
+installer: 	Writing files: 15% Completed
+#
+installer: 	Writing files: 15% Completed
+#
+installer: 	Writing files: 16% Completed
+#
+installer: 	Writing files: 16% Completed
+#
+installer: 	Writing files: 17% Completed
+#
+installer: 	Writing files: 18% Completed
+#
+installer: 	Writing files: 19% Completed
+#
+installer: 	Writing files: 20% Completed
+#
+installer: 	Writing files: 21% Completed
+#
+installer: 	Writing files: 22% Completed
+#
+installer: 	Writing files: 22% Completed
+#
+installer: 	Writing files: 23% Completed
+#
+installer: 	Writing files: 24% Completed
+#
+installer: 	Writing files: 24% Completed
+#
+installer: 	Writing files: 25% Completed
+installer: 	Writing files: 26% Completed
+#
+installer: 	Writing files: 26% Completed
+#
+installer: 	Writing files: 26% Completed
+#
+installer: 	Writing files: 27% Completed
+installer: 	Writing files: 28% Completed
+#
+installer: 	Writing files: 29% Completed
+#
+installer: 	Writing files: 30% Completed
+#
+installer: 	Writing files: 30% Completed
+#
+installer: 	Writing files: 31% Completed
+#
+installer: 	Writing files: 32% Completed
+#
+installer: 	Writing files: 33% Completed
+#
+installer: 	Writing files: 33% Completed
+installer: 	Writing files: 35% Completed
+#
+installer: 	Writing files: 35% Completed
+#
+installer: 	Writing files: 37% Completed
+installer: 	Writing files: 38% Completed
+#
+installer: 	Writing files: 39% Completed
+#
+installer: 	Writing files: 39% Completed
+#
+installer: 	Writing files: 41% Completed
+#
+installer: 	Writing files: 42% Completed
+#
+installer: 	Writing files: 43% Completed
+#
+installer: 	Writing files: 45% Completed
+#
+installer: 	Writing files: 45% Completed
+installer: 	Writing files: 46% Completed
+#
+installer: 	Writing files: 47% Completed
+installer: 	Writing files: 49% Completed
+#
+installer: 	Writing files: 50% Completed
+#
+installer: 	Writing files: 50% Completed
+#
+installer: 	Writing files: 51% Completed
+#
+installer: 	Writing files: 52% Completed
+#
+installer: 	Writing files: 53% Completed
+#
+installer: 	Writing files: 54% Completed
+#
+installer: 	Writing files: 54% Completed
+#
+installer: 	Writing files: 55% Completed
+#
+installer: 	Writing files: 56% Completed
+#
+installer: 	Writing files: 57% Completed
+#
+installer: 	Writing files: 58% Completed
+installer: 	Writing files: 58% Completed
+#
+installer: 	Writing files: 59% Completed
+#
+installer: 	Writing files: 60% Completed
+#
+installer: 	Writing files: 61% Completed
+#
+installer: 	Writing files: 62% Completed
+#
+installer: 	Writing files: 62% Completed
+#
+installer: 	Writing files: 63% Completed
+#
+installer: 	Writing files: 64% Completed
+#
+installer: 	Writing files: 64% Completed
+#
+installer: 	Writing files: 65% Completed
+#
+installer: 	Writing files: 65% Completed
+#
+installer: 	Writing files: 66% Completed
+#
+installer: 	Writing files: 66% Completed
+#
+installer: 	Writing files: 67% Completed
+#
+installer: 	Writing files: 68% Completed
+installer: 	Writing files: 68% Completed
+#
+installer: 	Writing files: 69% Completed
+#
+installer: 	Writing files: 70% Completed
+#
+installer: 	Writing files: 71% Completed
+#
+installer: 	Writing files: 71% Completed
+installer: 	Writing files: 72% Completed
+#
+installer: 	Writing files: 72% Completed
+#
+installer: 	Writing files: 74% Completed
+#
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 76% Completed
+#
+installer: 	Writing files: 77% Completed
+#
+installer: 	Writing files: 79% Completed
+#
+installer: 	Writing files: 80% Completed
+#
+installer: 	Writing files: 81% Completed
+#
+installer: 	Writing files: 81% Completed
+#
+installer: 	Writing files: 82% Completed
+#
+installer: 	Writing files: 83% Completed
+#
+installer: 	Writing files: 84% Completed
+installer: 	Writing files: 86% Completed
+#
+installer: 	Writing files: 87% Completed
+#
+installer: 	Writing files: 88% Completed
+installer: 	Writing files: 88% Completed
+#
+installer: 	Writing files: 89% Completed
+#
+installer: 	Writing files: 89% Completed
+#
+installer: 	Writing files: 90% Completed
+installer: 	Writing files: 90% Completed
+#
+installer: 	Writing files: 90% Completed
+#
+installer: 	Writing files: 90% Completed
+#
+installer: 	Writing files: 91% Completed
+#
+installer: 	Writing files: 92% Completed
+#
+installer: 	Writing files: 92% Completed
+#
+installer: 	Writing files: 93% Completed
+#
+installer: 	Writing files: 94% Completed
+#
+installer: 	Writing files: 95% Completed
+installer: 	Writing files: 95% Completed
+#
+installer: 	Writing files: 95% Completed
+installer: 	Writing files: 95% Completed
+#
+installer: 	Writing files: 96% Completed
+#
+installer: 	Writing files: 96% Completed
+#
+installer: 	Writing files: 98% Completed
+installer: 	Writing files: 98% Completed
+#
+installer: 	Writing files: 99% Completed
+#
+installer: 	Writing package receipt
+#
+installer: Installing Hewlett-Packard Printer Drivers.....
+installer: 	
+installer: 	Configuring Installation
+#
+installer: 	Writing files
+#
+installer: 	Writing files: 3% Completed
+#
+installer: 	Writing files: 5% Completed
+#
+installer: 	Writing files: 6% Completed
+#
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 10% Completed
+#
+installer: 	Writing files: 11% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 14% Completed
+installer: 	Writing files: 17% Completed
+#
+installer: 	Writing files: 17% Completed
+#
+installer: 	Writing files: 19% Completed
+#
+installer: 	Writing files: 22% Completed
+#
+installer: 	Writing files: 22% Completed
+installer: 	Writing files: 25% Completed
+#
+installer: 	Writing files: 27% Completed
+#
+installer: 	Writing files: 27% Completed
+#
+installer: 	Writing files: 28% Completed
+#
+installer: 	Writing files: 29% Completed
+#
+installer: 	Writing files: 33% Completed
+#
+installer: 	Writing files: 34% Completed
+#
+installer: 	Writing files: 35% Completed
+#
+installer: 	Writing files: 37% Completed
+#
+installer: 	Writing files: 39% Completed
+#
+installer: 	Writing files: 39% Completed
+#
+installer: 	Writing files: 41% Completed
+#
+installer: 	Writing files: 44% Completed
+#
+installer: 	Writing files: 47% Completed
+#
+installer: 	Writing files: 48% Completed
+#
+installer: 	Writing files: 49% Completed
+#
+installer: 	Writing files: 50% Completed
+#
+installer: 	Writing files: 51% Completed
+#
+installer: 	Writing files: 53% Completed
+#
+installer: 	Writing files: 55% Completed
+#
+installer: 	Writing files: 56% Completed
+#
+installer: 	Writing files: 57% Completed
+#
+installer: 	Writing files: 60% Completed
+#
+installer: 	Writing files: 61% Completed
+#
+installer: 	Writing files: 62% Completed
+#
+installer: 	Writing files: 62% Completed
+#
+installer: 	Writing files: 64% Completed
+#
+installer: 	Writing files: 65% Completed
+#
+installer: 	Writing files: 66% Completed
+#
+installer: 	Writing files: 68% Completed
+installer: 	Writing files: 72% Completed
+#
+installer: 	Writing files: 72% Completed
+#
+installer: 	Writing files: 73% Completed
+#
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 77% Completed
+#
+installer: 	Writing files: 79% Completed
+#
+installer: 	Writing files: 80% Completed
+#
+installer: 	Writing files: 82% Completed
+#
+installer: 	Writing files: 82% Completed
+#
+installer: 	Writing files: 83% Completed
+#
+installer: 	Writing files: 84% Completed
+installer: 	Writing files: 87% Completed
+#
+installer: 	Writing files: 87% Completed
+#
+installer: 	Writing files: 88% Completed
+installer: 	Writing files: 90% Completed
+#
+installer: 	Writing files: 92% Completed
+#
+installer: 	Writing files: 96% Completed
+#
+installer: 	Writing files: 96% Completed
+#
+installer: 	Writing files: 98% Completed
+#
+installer: 	Writing files: 100% Completed
+#
+installer: 	Writing files: 100% Completed
+#
+installer: 	Writing files: 100% Completed
+#
+installer: 	Writing package receipt
+#
+installer: Installing Lexmark Printer Drivers.....
+installer: 	
+installer: 	Configuring Installation
+####
+installer: 	Writing files
+#
+installer: 	Writing files: 3% Completed
+#
+installer: 	Writing files: 4% Completed
+#
+installer: 	Writing files: 7% Completed
+#
+installer: 	Writing files: 9% Completed
+#
+installer: 	Writing files: 12% Completed
+#
+installer: 	Writing files: 17% Completed
+#
+installer: 	Writing files: 21% Completed
+#
+installer: 	Writing files: 23% Completed
+#
+installer: 	Writing files: 25% Completed
+#
+installer: 	Writing files: 28% Completed
+#
+installer: 	Writing files: 28% Completed
+#
+installer: 	Writing files: 30% Completed
+#
+installer: 	Writing files: 33% Completed
+#
+installer: 	Writing files: 34% Completed
+#
+installer: 	Writing files: 37% Completed
+#
+installer: 	Writing files: 37% Completed
+installer: 	Writing files: 39% Completed
+#
+installer: 	Writing files: 40% Completed
+#
+installer: 	Writing files: 41% Completed
+installer: 	Writing files: 44% Completed
+#
+installer: 	Writing files: 44% Completed
+#
+installer: 	Writing files: 46% Completed
+installer: 	Writing files: 48% Completed
+#
+installer: 	Writing files: 48% Completed
+installer: 	Writing files: 50% Completed
+#
+installer: 	Writing files: 51% Completed
+#
+installer: 	Writing files: 54% Completed
+#
+installer: 	Writing files: 57% Completed
+#
+installer: 	Writing files: 58% Completed
+#
+installer: 	Writing files: 60% Completed
+#
+installer: 	Writing files: 62% Completed
+#
+installer: 	Writing files: 67% Completed
+#
+installer: 	Writing files: 71% Completed
+#
+installer: 	Writing files: 72% Completed
+#
+installer: 	Writing files: 72% Completed
+#
+installer: 	Writing files: 73% Completed
+#
+installer: 	Writing files: 75% Completed
+#
+installer: 	Writing files: 76% Completed
+#
+installer: 	Writing files: 78% Completed
+#
+installer: 	Writing files: 82% Completed
+#
+installer: 	Writing files: 83% Completed
+installer: 	Writing files: 86% Completed
+#
+installer: 	Writing files: 86% Completed
+#
+installer: 	Writing files: 89% Completed
+#
+installer: 	Writing files: 90% Completed
+#
+installer: 	Writing files: 93% Completed
+#
+installer: 	Writing files: 94% Completed
+installer: 	Writing files: 96% Completed
+#
+installer: 	Writing files: 97% Completed
+#
+installer: 	Writing files: 98% Completed
+#
+installer: 	Writing package receipt
+#

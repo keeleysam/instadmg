@@ -1,0 +1,34 @@
+Changes in instadmg 1.2b
+
+Variables:
+Added OS detection.
+Added platform detection.
+
+Environment Variables:
+Added CM_BUILD=CM_BUILD to allow non-root installs.
+
+Logging:
+Added timestamps to logging.
+All output is now directed to logs.
+Corrected typos in a few pkg log redirects.
+
+Image Creation:
+Will now create a dmg in the correct format for PPC or i386.
+
+OS Install:
+On 10.5 will now detect, and use, an InstallerChoices.xml file. See <http://www.afp548.com/forum/viewtopic.php?showtopic=18907> for details on the file format.
+.DS_Store filtering added.
+
+Apple Update Install:
+.DS_Store filtering added.
+Sort order issues solved with nested folders with numerical names.
+
+Custom Package Install:
+.DS_Store filtering added.
+Sort order issues solved with nested folders with numerical names.
+
+Cleanup Handler:
+Added logging details.
+
+License:
+Adopted Apache 2.0 license for Sourceforge.net project submission.

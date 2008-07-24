@@ -1,0 +1,25 @@
+#summary Roadmap for instadmg reference script featureset
+
+= Introduction =
+
+This is just a dump from the older roadmap. Things have jumbled a bit.
+
+= Details =
+
+•1.4b
+–Logging cleanup
+–Language code variable
+–ASR ﬁlesystem name variable
+–Timestamp handler
+–Preﬂight handler
+–PPC image creation format ﬁxes
+–Individual package InstallerChoices.xml support
+
+•1.5b/RC1
+–Reduce path hardness
+–Logging changes for one logset per run
+–Debug mode
+–getopts
+
+•2.0b
+–Difference pkg creation between builds

@@ -11,12 +11,13 @@ Strike shows the things that are in the current HEAD.
 
 1.4
   * ~~Logging cleanup~~
-  * Language code variable
-  * ASR ﬁlesystem name variable
+  * ~~Language code variable~~
+  * ~~ASR ﬁlesystem name variable~~
   * ~~Timestamp handler~~
   * Preﬂight handler
   * ~~PPC image creation format ﬁxes~~
   * ~~Individual package InstallerChoices.xml support~~
+  * ~~Caching of the base install~~
 
 1.5
   * Reduce path hardness

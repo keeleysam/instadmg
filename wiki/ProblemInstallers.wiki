@@ -1,0 +1,13 @@
+#labels Phase-Support
+A list of installers that have issues when installed by InstaDMG.
+
+= Introduction =
+
+Because InstaDMG is installing on a virtual disk rather than the boot volume a number of installers don't work quite perfectly with it. This page is a location to start a list of these Apps and possible solutions.
+
+Note that in some cases the solution might be to install the application on a sample computer and then use tools repackage what was installed back into a .pkg and then use the repackeged .pkg in InstaDMG.
+
+= Details =
+
+  * Growl 1.1.4
+    There is a postflight script in the pkg that attempts to open the installed prefpane. This causes System Preferences to open. This should not harm anything. Karl has sent a message to the Growl group with a solution that they can incorporate in their next version.

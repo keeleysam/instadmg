@@ -7,4 +7,6 @@ When adding ideas please leave your handle and explain the idea well.
 
 = Details =
 
-* karl.kuehn: Re-do the dmg mounting portion to allow for multiple dmg's to be mounted and for individual pkg's to be used from them with their own installerchoices files. Possibly do this with a single "union" mount to make the multiple DVD's look like one disk and be able to hide it from the finder.
+* karl.kuehn: Redo the dmg mounting portion to allow for multiple dmg's to be mounted and for individual pkg's to be used from them with their own installerchoices files. Possibly do this with a single "union" mount to make the multiple DVD's look like one disk and be able to hide it from the finder.
+
+* karl.kuehn: Transform the BaseOS cache images from Read/Write to compressed to save ourselves a number of Gigs.

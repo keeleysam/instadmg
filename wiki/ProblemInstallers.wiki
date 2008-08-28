@@ -9,5 +9,11 @@ Note that in some cases the solution might be to install the application on a sa
 
 = Details =
 
+  * iTunes 7.7.x
+    When iTunes is installed it launches a daemon process to wait for iPods and iPhones. It will happily launch the one that it just installed on the InstaDMG target volume. This was preventing InstaDMG from closing the volume and creating the ASR volume. This has been corrected and InstaDMG now closes any program that has a file open on the target volume before closing for ASR scan.
+
+  * iLife updaters
+    The iLife installers and updaters create soft-links that lead off the disk. Correction: The clean_up_image routine now has code to re-direct this sort of mistake before the image is made.
+
   * Growl 1.1.4
-    There is a postflight script in the pkg that attempts to open the installed prefpane. This causes System Preferences to open. This should not harm anything. Karl has sent a message to the Growl group with a solution that they can incorporate in their next version.
+    There is a postflight script in the pkg that attempts to open the installed prefpane. This causes System Preferences to open. This should not harm anything. Correction: Karl has sent a message to the Growl group with a solution that they can incorporate in their next version.

@@ -17,3 +17,6 @@ Note that in some cases the solution might be to install the application on a sa
 
   * Growl 1.1.4
     There is a postflight script in the pkg that attempts to open the installed prefpane. This causes System Preferences to open. This should not harm anything. *Fix*: Karl has sent a message to the Growl group with a solution that they can incorporate in their next version.
+
+  * Cisco VPN 4.9
+     There are a number of postflight scripts that depend on the way that they are invoked from a local disk.  These postflight scripts fail when correcting symlinks, etc.  *Fix*:  Re package the VPN package so that the symlinks point to the correct location

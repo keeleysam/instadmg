@@ -2,6 +2,8 @@
 
 = Introduction =
 
+The latest version of this document can always be found at: http://code.google.com/p/instadmg/wiki/InstaUp2Date
+
 !InstaDMG is focused on producing a single base image and producing the same thing every single time, changing only the things that you deliberately change in the process. However, many people need to produce many different images with different load-sets on them. For that purpose !InstaDMG becomes a little unwieldy.
 
 However, included in the package with !InstaDMG is an add-on program, !InstaUp2Date, that can be used to manage the folders that !InstaDMG uses. It uses files called "catalog files" (with an extension of .catalog) to list out the software that should be in a particular image. These catalog files can reference each other, so you can create a base image or pools of shared software so that you only have to make a single adjustment when something changes.
@@ -11,7 +13,7 @@ The catalog files reference the installers that they will be managing in one of 
   # A file/folder name to be searched for in the InstaDMG/!InstallerFiles/!InstaUp2DatePackages folder.
   # A http(s) reference to a dmg containing .pkg installers.
 
-The references to other .catalog files can also be any of those types, allowing (in principal) for a shared baseOS catalog file to referenced.
+The references to other .catalog files can also be any of those types, allowing (in principal) for a shared baseOS catalog file to referenced. Any packages that are referenced with http urls can will even be downloaded for you by !InstaUp2Date.
 
 At this point everything is command-line only, but !InstaUp2Date is written in Python and has been written with the possibility of sliding a Cocoa GUI on in mind.
 
@@ -19,13 +21,26 @@ At this point everything is command-line only, but !InstaUp2Date is written in P
 
 !InstaUp2Date is included with InstaDMG, so no installation is necessary. It is in InstaDMG/!AddOns/!InstaUp2Date, and should probably be left there. While running it will automatically 'cd' to the InstaDMG folder, so you can run it from within any folder without changing things.
 
-= Using InstaDMG =
+= Using InstaUp2Date =
 
-== 
+To use !InstaUp2Date you need to have a few things setup already:
+  # Have a Base OS image already in place in InstaDMG/!InstallerFiles/!BaseOS
+  # Have at least one catalog file in InstaDMG/!AddOns/!InstaUp2Date/!CatalogFiles
+  # Have any dmg's or pkg's referenced in the catalog files that you are using that don't use http addresses already placed in InstaDMG/!InstallerFiles/InstaUp2DatePackages (so the packages you create yourself)
+
+With those things in place, then you simply need to call !InstaUp2Date:
+
+{{{/path/to/instaUp2Date.py <<catalog file>>}}}
+
+If you would like to run !InstaDMG immediately after preparing the folders for it, then you just have to add either {{{-p}}} or {{{--process}}} to the invocation. When called like this !InstaUp2Date will call !InstaDMG, and even add appropriate command-line switches to use the file names as are specified in the command files. An invocation like this needs to be run as root, and might look like this:
+
+{{{sudo /path/to/instaUp2Date.py --process <<catalog file>>}}}
+
+Additionally, you can supply multiple catalog files. !InstaUp2Date will run through them one after another. This is most useful if you are using the {{{--process}}} flag as at the start of each run the setup from the previous run is wiped out. However it might be useful to know that all of your catalog files are (at least mostly) valid and that you have downloaded all the relevant http files.
 
 = Command Line Options =
 
-There are three command line options that InstaUp2Date will accept:
+There are three command line options that !InstaUp2Date will accept:
 
 {{{-h}}} or {{{--help}}}		Print the usage information and exit.
 
@@ -39,13 +54,9 @@ There are three command line options that InstaUp2Date will accept:
 
 Since all of the lines in a catalog file require (or at least strongly encourage) a checksum, there is an included tool to help you produce checksums for the files you are using. The tool is conveniently called "checksum.py" and is located in the same folder as the !instaUp2Date.py script. To use it just call it like this (on the command line):
 
-{{{/path/to/checksum.py <<catalog file>>}}}
+{{{/path/to/checksum.py <<path/to.DMG_or_PKG>>}}}
 
-If you would like to run !InstaDMG immediately after preparing the folders for it, then you just have to add either {{{-p}}} or {{{--process}}} to the invocation. When called like this !InstaUp2Date will call !InstaDMG, and even add appropriate command-line switches to use the file names as are specified in the command files. An invocation like this needs to be run as root, and might look like this:
-
-{{{sudo /path/to/checksum.py --process <<catalog file>>}}}
-
-Additionally, you can supply multiple catalog files. !InstaUp2Date will run through them one after another. This is most useful if you are using the {{{--process}}} flag as at the start of each run the setup from the previous run is wiped out. However it might be useful to know that all of your catalog files are (at least mostly) valid and that you have downloaded all the relevant http files.
+The path you use can either be of the normal "/tmp/thisfile.dmg" variety, or as a http(s) url ({{{http://somewhere.com/myGreatPkg.dmg}}}. The latter form is probably the more useful for packages that you don't create yourself, as !InstaUp2Date will cache them and then you don't have to move them with you if you go to a new computer. The checkusmming program will download the item (so that it can be checksummed), but will not save it anywhere.
 
 = Internal Details =
 
@@ -61,10 +72,9 @@ Additionally, you can supply multiple catalog files. !InstaUp2Date will run thro
 
   * !InstaUp2Date is under the same license as !InstaDMG.
 
-
 = Future Directions =
 
-These are ideas that InstaUp2Date might take, but are not promises:
+These are ideas that !InstaUp2Date might take, but are not promises:
 
   * There are a bunch of problems that combining !InstaDMG and !InstaUp2Date together into one program would solve. This includes: having pre/postflight scripts, adding items without pkg's, and improving the loging in !InstaDMG (right now stderr is really tough).
 

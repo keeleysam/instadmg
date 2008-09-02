@@ -49,6 +49,19 @@ Additionally, you can supply multiple catalog files. InstaUp2Date will run throu
 
 = Internal Details =
 
+= Random Notes =
+
+  * InstaUpToDate does not add any extra abilities to InstaDMG once it starts running. It only allows the automation of setting things up before you run InstaDMG. So you can't do anything using InstaUp2Date that was not already possible with InstaDMG.
+
+  * The script is still in a somewhat rough form. I am using it in my workflow, and it is working, but it has not been extensively tested at this point. No warrantee is implied at all.
+
+  * Additions and bug-fixes are always welcome
+
+  * At the moment error reporting is very rough. Often you will need to read through the code to figure out what went wrong. Sometime in the future this will be cleaned up some.
+
+  * InstaUp2Date is under the same license as InstaDMG.
+
+
 = Future Directions =
 
 These are ideas that InstaUp2Date might take, but are not promises:

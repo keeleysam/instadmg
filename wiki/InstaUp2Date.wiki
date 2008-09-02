@@ -1,4 +1,4 @@
-InstaUp2Date is a front-end for InstaDMG that is now included in the base package.
+InstaUp2Date is a front-end for InstaDMG and is included in the base package.
 
 = Introduction =
 

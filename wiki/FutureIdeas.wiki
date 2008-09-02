@@ -12,3 +12,5 @@ When adding ideas please leave your handle and explain the idea well.
   * karl.kuehn: Transform the BaseOS cache images from Read/Write to compressed to save ourselves a number of Gigs.
 
   * karl.kuehn: Put in a method of installing applications that do drag-and-drop install. This would be far easier if InstaDMG and !InstaUp2Date merge. Then it would simply be a type like dmg and folder are now. As a temporary hack, we could move anything that is a .app into the applications folder.
+
+  * karl.kuehn: Re-work the BaseOS disk manipulation. Allow for http mounts, and make sure that things get un-mounted at the end.

@@ -16,7 +16,7 @@ Strike shows the things that are in the current HEAD.
   * ~~Timestamp handler~~
   * Preﬂight handler
   * ~~PPC image creation format ﬁxes~~
-  * ~~Individual package InstallerChoices.xml support~~
+  * ~~Individual package !InstallerChoices.xml support~~
   * ~~Caching of the base install~~
 
 1.5

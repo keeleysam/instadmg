@@ -21,7 +21,7 @@ At this point everything is command-line only, but !InstaUp2Date is written in P
 
 !InstaUp2Date is included with InstaDMG, so no installation is necessary. It is in InstaDMG/!AddOns/!InstaUp2Date, and should probably be left there. While running it will automatically 'cd' to the InstaDMG folder, so you can run it from within any folder without changing things.
 
-= Using InstaUp2Date =
+= Using !InstaUp2Date =
 
 To use !InstaUp2Date you need to have a few things setup already:
   # Have a Base OS image already in place in InstaDMG/!InstallerFiles/!BaseOS

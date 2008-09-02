@@ -26,7 +26,7 @@ At this point everything is command-line only, but !InstaUp2Date is written in P
 To use !InstaUp2Date you need to have a few things setup already:
   # Have a Base OS image already in place in InstaDMG/!InstallerFiles/!BaseOS
   # Have at least one catalog file in InstaDMG/!AddOns/!InstaUp2Date/!CatalogFiles
-  # Have any dmg's or pkg's referenced in the catalog files that you are using that don't use http addresses already placed in InstaDMG/!InstallerFiles/InstaUp2DatePackages (so the packages you create yourself)
+  # Have any dmg's or pkg's referenced in the catalog files that you are using that don't use http addresses already placed in InstaDMG/!InstallerFiles/!InstaUp2DatePackages (so the packages you create yourself)
 
 With those things in place, then you simply need to call !InstaUp2Date:
 

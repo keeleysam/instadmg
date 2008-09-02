@@ -53,4 +53,10 @@ Additionally, you can supply multiple catalog files. InstaUp2Date will run throu
 
 These are ideas that InstaUp2Date might take, but are not promises:
 
+  * There are a bunch of problems that combining InstaDMG and InstaUp2Date together into one program would solve. This includes: having pre/postflight scripts, adding items without pkg's, and improving the loging in InstaDMG (right now stderr is really tough).
 
+  * Add a Cocoa GUI.
+
+  * Do more pre-flighting of the items to make sure that they include pkg's.
+
+  * Allow for some introspection into pkg's... possibly even use a union mount to allow pre and postflight scripts to be edited without changing anything. This would require the first item.

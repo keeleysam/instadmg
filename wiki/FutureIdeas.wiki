@@ -16,3 +16,7 @@ When adding ideas please leave your handle and explain the idea well.
   * karl.kuehn: Re-work the BaseOS disk manipulation. Allow for http mounts, and make sure that things get un-mounted at the end.
 
   * karl.kuehn: Add trap code to catch when someone Control-C's out and clean up a lot of error handling code.
+
+  * joshwisenbaker: Transition code to Python
+  
+  * joshwisenbaker: SIU integration via automator

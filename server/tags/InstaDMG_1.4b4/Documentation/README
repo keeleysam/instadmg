@@ -1,0 +1,34 @@
+INTRO
+InstaDMG creates ASR ready deployment images from Mac OS X Installer packages. It operates on the idea that everything is packaged. This may require the re-packaging of installers and updates that don't want to be installed on a non-boot volume. You can use PackageMaker to create new packages. JAMF's Composer tool is the easiest way to generate a package from an install.
+
+Forums, news, and reference downloads at http://www.afp548.com
+CVS and bug tracking at http://code.google.com/p/instadmg/
+
+USING
+Full documentation is in the included InstaDMG.pdf file, but if you are in a hurry...
+
+The InstaDMG folder contains several folders and is self-contained. This allows you to put it on an external drive to move from Mac to Mac. To use simply do the following.
+
+1. Use Disk Utility to create an image of a Retail Mac OS X installer disk (one that is sold separately) or the install disks that came with your Mac. Leave the image with the default name (either "Mac OS X Install DVD.dmg" or "Mac OS X Install Disc 1.dmg"). Place the dmg file(s) in the InstaDMG/InstallerFiles/BaseOS folder. If you have an InstallerChoices.xml file for a Leopard install place it in the same directory as the BaseOS dmg.
+
+2. Place any System updates in the InstaDMG/InstallerFiles/BaseUpdates folder. Each pkg needs to be in a numbered directory. This will allow the ordering of packages without changing their names. If you have more then 9 updates, then name the first 9 with a leading 0 (ie: 01, 02, 03, etc...)
+
+3. Place any other installers in the InstaDMG/InstallerFiles/CustomPKG folder. Each pkg needs to be in a numbered directory. This will allow the ordering of packages without changing their names. If you have more then 9 updates, then name the first 9 with a leading 0 (ie: 01, 02, 03, etc...)
+
+4. Run './instadmg.bash -h' to get the usage information to see any command-line flags you might want to use.
+
+5. Run with sudo.
+
+The result will be an ASR prepared deployment image.
+
+KNOWN ISSUES
+Needs testing on more hardware, specifically PPC.
+
+Needs more testing on 10.4 as the development team is focusing on 10.5. There are signs that the script currently has major problems on 10.4.
+
+If you are running on 10.5 it will try to apply any InstallerChoices.xml file it finds. Future revision will also detect the OS being installed and not try to apply it to 10.4 build trains running on 10.5.
+
+On 10.4 installs all packages in the OSInstall.mpkg will be installed. This is a limitation of the 10.4 installer.
+
+VERSION
+1.4b4

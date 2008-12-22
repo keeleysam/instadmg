@@ -1,0 +1,31 @@
+#summary Roadmap for instadmg reference script featureset
+#labels Phase-Requireme,Phase-Design,Featured
+
+= Introduction =
+
+This is just a dump from the older roadmap. Things have jumbled a bit.
+
+Strike shows the things that are in the current HEAD.
+
+Ideas that have not made it onto the list quite yet are on the [FutureIdeas Future Ideas] page.
+
+= Details =
+
+1.4
+  * ~~Logging cleanup~~
+  * ~~Language code variable~~
+  * ~~ASR ﬁlesystem name variable~~
+  * ~~Timestamp handler~~
+  * Preﬂight handler
+  * ~~PPC image creation format ﬁxes~~
+  * ~~Individual package !InstallerChoices.xml support~~
+  * ~~Caching of the base install~~
+
+1.5
+  * Reduce path hardness
+  * ~~Logging changes for one logset per run~~
+  * Debug mode
+  * ~~getopts~~
+
+2.0
+  * Difference pkg creation between builds

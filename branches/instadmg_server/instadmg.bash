@@ -371,6 +371,33 @@ check_setup () {
 	fi
 }
 
+
+# Function to check a mounted volume if it is a valid Apple OS installer, or Apple Server 
+# OS installer. It will return the values:  none client server
+# USAGE: check_os_install_type /path/to/mount/point/
+
+check_os_install_type() {
+
+	# 10.5 uses flat packages (files), and 10.4 and earlier uses packages (directories)
+
+	# Check if install is server.	
+	if [ -d "$1"/System/Installation/Packages/MacOSXServerInstall.mpkg ] || [ -f $1/System/Installation/Packages/MacOSXServerInstall.mpkg ]; then
+		# Confirmed this is a Server install, not a client install
+		echo "server"
+	
+	# Check if install is client.	
+	elif [ -d $1/System/Installation/Packages/OSInstall.mpkg ] || [ -f $1/System/Installation/Packages/OSInstall.mpkg ]; then
+		# Confirmed this is a Apple OS installer for client
+		echo "client"
+			
+	else
+		# Not an Apple OS installer
+		echo "none"
+	fi
+}
+
+
+
 # Mount the OS source image.
 # If you have some wacky disk name then change this as needed.
 

@@ -20,3 +20,5 @@ When adding ideas please leave your handle and explain the idea well.
   * joshwisenbaker: Transition code to Python
   
   * joshwisenbaker: SIU integration via automator
+
+  * karl.kuehn: use update_dyld_shared_cache -root -universal_boot to re-create the shared cache for faster booting. The negative of this would be that every computer would have the same "random" addresses.

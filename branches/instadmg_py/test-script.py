@@ -2,7 +2,7 @@
 
 from __future__ import with_statement
 
-import sys, os, logging, new
+import sys, os, logging, new, time
 from instadmg import dmgContainer, setupLogger, tempFolder, processObject, pkgInstaller, folderContainer, loggedSubprocess
 os.chdir( os.path.dirname(sys.argv[0]) )
 
@@ -48,7 +48,7 @@ with tempFolder():
 	logging.process('Starting %s' % 'Test A')
 	with processObject(
 		containerType=dmgContainer, installerType=pkgInstaller,
-		name="TestA", source='testing/TestA/TestA.dmg',
+		name="TestA", source='testing/TestA/TestA.dmg', useShadowFile=True,
 		checksum='aeca2a04481fef3e7d79120f6744bfc92d22ba84') as testItem:
 				
 		for thisItem in testItem.listComponents():
@@ -59,7 +59,7 @@ with tempFolder():
 	with processObject(
 		containerType=folderContainer, installerType=pkgInstaller,
 		name="TestB", source='testing/TestB/',
-		checksum='19b46f6764ee5ff27e33147ae4e4dea69df1ad3b') as testItem:
+		checksum='17dc6616ed1ab342d502453f919eab2891c43ef1') as testItem:
 				
 		for thisItem in testItem.listComponents():
 			logging.info('Installer item: %s' % thisItem)

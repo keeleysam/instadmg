@@ -5,9 +5,13 @@
 TODO:
 	- Use custom exception types (so they can be better handled by callers)
 	- Handle cancel events from outside (signals) with some grace
-	- Setup the logging object to emulate a file object
+	- Setup the logging object to emulate a file object (maybe)
 	- Autodetect the taret type
-	- Move the loggedSubprocess to a subclass of sobprocess.Popen
+	- Move the loggedSubprocess to a subclass of subprocess.Popen
+	- change the tempfolder class to hold open the enclosing folder untill the end
+	- Flat-package containers
+	- .app installers
+	- silent installer executables
 '''
 
 from __future__ import with_statement
@@ -163,7 +167,7 @@ def setupLogger(target=None, level=None, formatter=None):
 
 #<!---------------- tempFolder ---------------->
 
-class tempFolder (object):
+class tempFolder ():
 	import logging, stat
 	
 	# instance variables
@@ -173,57 +177,59 @@ class tempFolder (object):
 	folderName				= None
 	message					= None
 	
-	enclosingDir			= None
+	enclosingDirPath		= None
+	enclosingDirObject		= None
 	
 	# class variables
 	
 	makeTraversableFolders	= True			# if True makse folders that are traversable by group and other
 	
-	enclosingDirs			= {}
-	defaultEnclosingDir		= None
+	_enclosingDirObjects			= {}
+	_defaultEnclosingDirObject		= None
 	
-	def __init__(self, folderName="tempFolder", enclosingDir=None, message=None):
+	def __init__(self, folderName="tempFolder", enclosingDir=None, message=None, makeTraversableFolders=None):
 		
 		if enclosingDir == None:
-			# use the default folder
+			# use the default enclosing dir
+			self.enclosingDirObject = self.getDefaultEnclosingDirObject()
+			self.enclosingDirPath = self.enclosingDirObject.path
+		
+		elif isinstance(enclosingDir, tempFolder):
+			self.enclosingDirObject = enclosingDir
+			self.enclosingDirPath = self.enclosingDirObject.path
+		
+		elif type(enclosingDir) == type(str()) and os.path.isdir(enclosingDir):
+			# we need to check if this is an object we already have
+			for thisEnclosingDirObject in self._enclosingDirObjects:
+				if thisEnclosingDirObject.path == enclosingDir:
+					self.enclosingDirObject = thisEnclosingDirObject
+					self.enclosingDirPath = self.enclosingDirObject.path
 			
-			if not self.defaultEnclosingDir:
-				# create it
-				self.__class__.defaultEnclosingDir = tempfile.mkdtemp(dir='/private/tmp', prefix='enclosingFolder.')
-				self.enclosingDir = self.defaultEnclosingDir
-				self.enclosingDirs[self.defaultEnclosingDir] = 1
-				logging.debug('Created default enclosing folder: %s' % self.defaultEnclosingDir)
-				
-				if self.makeTraversableFolders:
-					os.chmod(self.defaultEnclosingDir, stat.S_IRWXU | stat.S_IXGRP | stat.S_IXOTH)
-					
-			else:
-				self.enclosingDir = self.defaultEnclosingDir
-				self.enclosingDirs[self.defaultEnclosingDir] += 1
+			if self.enclosingDirObject == None:
+				# this is an existing folder that we don't have to worry about
+				self.enclosingDirPath = enclosingDir
 		
 		else:
-			if not self.defaultEnclosingDir in self.enclosingDirs:
-				if not os.path.isdir(enclosingDir):
-					raise Exception('Asked to create a temp folder inside a non existant folder: %s' % enclosingDir)
-				
-				self.enclosingDir = tempfile.mkdtemp(dir='/private/tmp', prefix='enclosingFolder.')
-				self.enclosingDirs[self.enclosingDir] = 1
-				logging.debug('Created enclosing folder: %s' % self.enclosingDir)
-				
-				if self.makeTraversableFolders:
-					os.chmod(self.enclosingDir, stat.S_IRWXU | stat.S_IXGRP | stat.S_IXOTH)
-			
-			else:
-				self.enclosingDirs[self.defaultEnclosingDir] += 1
+			raise Exception('Unable to understand what do do with the value given for enclosingDir: %s' % str(enclosingDir))
 		
+		# some ref-counting to allowed for shared directories
+		if self.enclosingDirObject:
+			if self.enclosingDirPath in self.__class__._enclosingDirObjects:
+				self.__class__._enclosingDirObjects[self.enclosingDirObject.path]['refcount'] += 1
+			else:
+				self.__class__._enclosingDirObjects[self.enclosingDirObject.path] = {'object':self.enclosingDirObject, 'refcount':1}
+		
+		# create the folder
 		folderNameSeperator = ''
 		if not folderName[-1] == '.':
 			folderNameSeperator = '.'
-		self.path = tempfile.mkdtemp(dir=self.defaultEnclosingDir, prefix=folderName + folderNameSeperator)
+		self.path = tempfile.mkdtemp(dir=self.enclosingDirPath, prefix=folderName + folderNameSeperator)
 		self.folderName = folderName
 		
-		if self.makeTraversableFolders:
-					os.chmod(self.path, stat.S_IRWXU | stat.S_IXGRP | stat.S_IXOTH)
+		if makeTraversableFolders == False:
+			pass
+		elif makeTraversableFolders == True or self.makeTraversableFolders == True:
+			os.chmod(self.path, stat.S_IRWXU | stat.S_IXGRP | stat.S_IXOTH)
 		
 		if message:
 			self.message = message
@@ -233,6 +239,15 @@ class tempFolder (object):
 	
 	def __enter__(self):
 		return self
+	
+	@classmethod
+	def getDefaultEnclosingDirObject(cls):
+		if not cls._defaultEnclosingDirObject:
+			# create it
+			cls._defaultEnclosingDirObject = cls(enclosingDir='/tmp', folderName='defaultEnclosingFolder')
+			cls._enclosingDirObjects[cls._defaultEnclosingDirObject.path] = {'object':cls._defaultEnclosingDirObject, 'refcount':0}
+				
+		return cls._defaultEnclosingDirObject
 	
 	def __exit__(self, exc_type, exc_value, traceback):
 		self.__del__()
@@ -269,17 +284,17 @@ class tempFolder (object):
 		# wipe out the folder
 		os.rmdir(self.path)
 		
-		# remove the enclosing folder if this is the last one
-		self.enclosingDirs[self.enclosingDir] -= 1
-		if self.enclosingDirs[self.enclosingDir] < 1:
-			logging.debug('Removing enclosing folder: %s' % self.enclosingDir)
-			if os.path.isdir(self.enclosingDir):
-				os.rmdir(self.enclosingDir)
-			
-			if self.enclosingDir == self.defaultEnclosingDir:
-				self.__class__.defaultEnclosingDir = None
-			
-			self.enclosingDir = None
+		
+		# take care of the ref-counting and removing objects as they are not needed
+		if self.enclosingDirObject != None:
+			self.__class__._enclosingDirObjects[self.enclosingDirObject.path]['refcount'] -= 1
+			if self.__class__._enclosingDirObjects[self.enclosingDirObject.path]['refcount'] < 1:
+				if self.enclosingDirObject == self.__class__._defaultEnclosingDirObject:
+					self.__class__._defaultEnclosingDirObject = None
+				del self.__class__._enclosingDirObjects[self.enclosingDirObject.path]
+		
+		self.enclosingDirPath = None
+		self.enclosingDirObject = None
 		
 #<!============== Process Object ==============>
 
@@ -288,25 +303,39 @@ class processObject:
 	
 	dynamicClasses	= {}
 	
-	def __init__(self, containerType=None, installerType=None, name=None, source=None, checksum=None, checksumType=None):
+	def __init__(self, containerType=None, installerType=None, source=None, name=None, **kwargs):
 		if not containerType or type(containerType) != type(self.__class__):
-			raise Exception('%s was missing a containerType or it was not a class' % self.__class__)
+			raise Exception('%s was missing the containerType or it was not a class' % self.__class__)
 		if not containerType or type(installerType) != type(self.__class__):
-			raise Exception('%s was missing a installerType or it was not a class' % self.__class__)
+			raise Exception('%s was missing the installerType or it was not a class' % self.__class__)
+		if not source or type(source) != type(str()):
+			raise Exception('%s was missing the source or it was not a string' % self.__class__)
 		
 		thisName = containerType.__name__ + ':' + installerType.__name__
 		if not (thisName in self.dynamicClasses):
-			self.dynamicClasses[thisName] = new.classobj(thisName, (containerType, installerType), {'name':name, 'source':source, 'checksum':checksum, 'checksumType':checksumType})
+			self.dynamicClasses[thisName] = new.classobj(thisName, (containerType, installerType, processObject), {})
 		self.__class__ = self.dynamicClasses[thisName]
 		
-		self.initContainer(name=name, source=source, checksum=checksum, checksumType=checksumType)
-		self.initInstaller()
+		if name:
+			self.name = name
+		
+		self.source = source
+		
+		self.initContainer(**kwargs)
+		self.initInstaller(**kwargs)
 	
-	def __enter__(self):
-		return self
+	def closeContainer(self):
+		pass # nothing to do for a folder
+		
+	def cleanupContainer(self):
+		pass # nothing to do for a folder
 	
 	def __exit__(self, exc_type, exc_value, traceback):
 		self.__del__()
+	
+	def __del__(self):
+		self.closeContainer()
+		self.cleanupContainer()
 
 #<!============= Container Objects ============>
 
@@ -329,20 +358,13 @@ class folderContainer:
 	
 	_containerPath	= None					# path to local folder-like object that contains the contents, always use the getContainerPath method
 		
-	def initContainer(self, name=None, source=None, checksum=None, checksumType=None):
+	def initContainer(self, checksum=None, checksumType=None, **kwargs):
 		''' Look for the DMG, but do not mount it yet '''
 		
-		if name:
-			self.name = name
-		
-		if not source:
-			raise Exception('No target was given to %s' % self.__class__.__name__)
-		
-		
-		if not os.path.exists(source):
-			raise Exception('No file exists at: %s' % source)
+		if not os.path.exists(self.source):
+			raise Exception('No file exists at: %s' % self.source)
 		else:	
-			self.archiveFile = source
+			self.archiveFile = self.source
 		
 		if checksum:
 			self.checksum = checksum
@@ -352,7 +374,12 @@ class folderContainer:
 		if self.checksum and self.checksumType:
 			self.checksumLocal()
 		
+		self.initContainerSubtype(**kwargs)
+		
 		self.validateTarget()
+	
+	def initContainerSubtype(self, **kwargs):
+		pass # nothing to do for a folder
 	
 	def __enter__(self):
 		return self
@@ -390,7 +417,7 @@ class folderContainer:
 		chunksize = 1 * 1024 * 1024
 		hashGenerator = hashlib.new(checksumType)
 		
-		def checksumFile(fileLocation):
+		def checksumFile(fileLocation, hashGenerator):
 			with open(fileLocation, 'rb') as hashfile:
 				def chunked(f, size):
 					while True:
@@ -402,12 +429,12 @@ class folderContainer:
 					hashGenerator.update(thisChunk)
 		
 		if os.path.isfile(targetPath):
-			checksumFile(targetPath)
+			checksumFile(targetPath, hashGenerator)
 		
 		elif os.path.isdir(targetPath):
 			for thisFolder, subFolders, subFiles in os.walk(targetPath):
 				for thisFile in subFiles:
-					checksumFile(thisFile)
+					checksumFile( os.path.join(thisFolder, thisFile), hashGenerator )
 		
 		else:
 			raise Exception('Checksum called on unusual object: %s' % targetPath)
@@ -419,41 +446,32 @@ class folderContainer:
 			logging.debug('%s (%s) passed checksum: %s' % (self.name, targetPath, checksum))
 		else:
 			logging.debug('%s passed checksum: %s' % (targetPath, checksum))
-	
-	def closeContainer(self):
-		pass # nothing to do for a folder
-	
-	def __exit__(self, exc_type, exc_value, traceback):
-		self.__del__()
-	
-	def __del__(self):
-		self.closeContainer()
 
 #<!---------------- DMG Object ---------------->
 
 class dmgContainer (folderContainer):
 	# instance variables
-	mountObject			= None	# to hold the tempFolder object
+	mountObject				= None	# to hold the tempFolder object
 		
-	mountWithShadow		= False	# mount image with a shadow file
-	shadowFile			= None	# path to the shadow file
+	useShadowFile			= False	# mount image with a shadow file
+	shadowFilePath			= None	# path to the shadow file
+	shadowFileAutoGenerated	= False	# if the shadowfile is autogenerated we will clean it up
+	
+	dmgFormat				= None
+	dmgFormatDescription	= None
 	
 	# class variables
 	
-	mountReadOnly		= True	# mount read-only (non-applicaable with a shadow file)
-	checksumAtMount		= True	# checksum the image before mouting
-	fsckAtMount			= True	# fsck mounted volumes durring mount
-	onwnersOn			= True	# turn owners on while mounting
+	mountReadOnly			= True	# mount read-only (non-applicaable with a shadow file)
+	checksumAtMount			= True	# checksum the image before mouting
+	fsckAtMount				= True	# fsck mounted volumes durring mount
+	onwnersOn				= True	# turn owners on while mounting
 	
-	showInFinder		= False
+	showInFinder			= False
 	
-	# dmg properties
-	format				= None
-	formatDescription	= None
-	
-	# class variables
-	#mountsFolder		= tempFolder(folderName="mountFolder")
-	
+	def initContainerSubtype(self, useShadowFile=False, **kwargs):
+		self.useShadowFile = useShadowFile
+		
 	def validateTarget(self):
 		self.getDMGInformation()
 	
@@ -532,8 +550,35 @@ class dmgContainer (folderContainer):
 			mountOptions.append('-autofsck')
 		else:
 			mountOptions.append('-noautofsck')
+			
+		if self.useShadowFile:
+			if self.shadowFilePath:
+				if os.path.exists(self.shadowFilePath):
+					if not os.path.isfile(self.shadowFilePath):
+						raise Exception('Preselected shadow file path is not a file: %s' % self.shadowFilePath)
+						
+					# check to see that that file looks like a shadow file... has 'shdw' as the first four bytes
+					checkFile = open(self.shadowFilePath)
+					checkData = checkFile.read(4)
+					checkFile.close()
+					if checkData != 'shdw':
+						raise Exception('Existing file does not look like a shadow file: %s' % self.shadowFilePath)
+					
+				else:
+					pass
+					# we will not controll this file, but it will be created
+			else:
+				# note that we are not actually creating the file here, but will let hdiutil do that
+				self.shadowFilePath = tempfile.mktemp(dir=tempFolder.getDefaultEnclosingDirObject().path, suffix=".shadow")
+				self.shadowFileAutoGenerated = True
+		
+			mountOptions.append('-shadow')
+			mountOptions.append(self.shadowFilePath)
+				
 		
 		mountCommand = ['/usr/bin/hdiutil', 'attach', self.archiveFile] + mountOptions + ['-mountpoint', self._containerPath]
+		
+		logging.debug3('Mount command: %s' % " ".join(mountCommand))
 		
 		# mount the DMG
 		if loggedSubprocess(mountCommand) != 0:
@@ -594,6 +639,13 @@ class dmgContainer (folderContainer):
 			
 		# the mount point should take care of itself
 
+	def cleanupContainer(self):
+		if self.shadowFileAutoGenerated == True and os.path.exists(self.shadowFilePath):
+			if self.name:
+				logging.debug2('Deleting shadow file for %s (%s): %s' % (self.name, self.archiveFile, self.shadowFilePath))
+			else:
+				logging.debug2('Deleting shadow file for %s: %s' %  self.archiveFile, self.shadowFilePath)
+			os.unlink(self.shadowFilePath)
 
 #<!-------------- Install Steps -------------->
 
@@ -608,7 +660,7 @@ class installItem:
 	useSeatbelt		= False
 	checkItems		= False
 	
-	def initInstaller(self):
+	def initInstaller(self, **kwargs):
 		pass
 	
 	def listComponents(self):

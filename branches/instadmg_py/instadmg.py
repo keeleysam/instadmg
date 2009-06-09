@@ -12,11 +12,16 @@ TODO:
 	- Flat-package containers
 	- .app installers
 	- silent installer executables
+	
+	- use the information from 'hdiutil imageinfo' better
+	
+	- solve the issue of shadow files on already mounted DMG's
+	- look into nameing the shadow files a little better
 '''
 
 from __future__ import with_statement
 
-import os, tempfile, subprocess, stat, logging, new
+import os, tempfile, subprocess, stat, logging, new, shutil
 import Foundation
 
 #<!---------------- Logging ------------------>
@@ -342,21 +347,23 @@ class processObject:
 #<!--------------- Folder Object -------------->
 
 class folderContainer:
-	import logging, subprocess
+	import logging, subprocess, shutil
 	
 	# class variables
-	checksumContainer	= True					# checksum the container
+	checksumContainer			= True					# checksum the container
 	
 	# instance variables
-	name				= 'No name provided'	# user-visible name
+	name						= 'No name provided'	# user-visible name
 	
-	archiveFile			= None					# path to the local resource file/folder
-	checksum			= None
-	checksumType		= 'sha1'
+	archiveFile					= None					# path to the local resource file/folder
+	checksum					= None
+	checksumType				= 'sha1'
+	archiveHasBeenChecksummed	= False
+	archiveValidated			= False
 	
 	# working instance variables
 	
-	_containerPath	= None					# path to local folder-like object that contains the contents, always use the getContainerPath method
+	_containerPath				= None					# path to local folder-like object that contains the contents, always use the getContainerPath method
 		
 	def initContainer(self, checksum=None, checksumType=None, **kwargs):
 		''' Look for the DMG, but do not mount it yet '''
@@ -379,8 +386,9 @@ class folderContainer:
 		self.validateTarget()
 	
 	def initContainerSubtype(self, **kwargs):
-		pass # nothing to do for a folder
-	
+		if len(kwargs) > 0:
+			logging.debug3('Unused arguments: %s' % " ".join(kwargs.keys()))
+		
 	def __enter__(self):
 		return self
 	
@@ -394,10 +402,16 @@ class folderContainer:
 		
 		if not os.path.isdir(self.archiveFile):
 			raise Exception('Target was not a directory: %s' % self.archiveFile)
+		
+		self.archiveValidated = True
 	
-	def checksumLocal(self, targetPath=None, checksum=None, checksumType=None):
+	def checksumLocal(self, targetPath=None, checksum=None, checksumType=None, forceChecksum=False):
 		import hashlib
-				
+		
+		if self.archiveHasBeenChecksummed == True and forceChecksum == False:
+			# we can skip this
+			return True
+		
 		if not targetPath:
 			if not self.archiveFile:
 				raise Exception('Checksum called, but no local file provided (%s)' % self.name)
@@ -442,6 +456,7 @@ class folderContainer:
 		if hashGenerator.hexdigest() != checksum:
 			raise Exception('Incorrect checksum on: %s (%s) was: %s should have been: %s' % (targetPath, self.name, hashGenerator.hexdigest(), checksum))
 		
+		self.archiveHasBeenChecksummed = True
 		if self.name:
 			logging.debug('%s (%s) passed checksum: %s' % (self.name, targetPath, checksum))
 		else:
@@ -470,10 +485,13 @@ class dmgContainer (folderContainer):
 	showInFinder			= False
 	
 	def initContainerSubtype(self, useShadowFile=False, **kwargs):
+		if len(kwargs) > 0:
+			logging.debug3('Unused arguments: %s' % " ".join(kwargs.keys()))
 		self.useShadowFile = useShadowFile
 		
 	def validateTarget(self):
 		self.getDMGInformation()
+		self.archiveValidated = True
 	
 	def getDMGInformation(self):
 		hdiutilProcess = subprocess.Popen(['/usr/bin/hdiutil', 'imageinfo', '-plist', self.archiveFile], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -488,6 +506,8 @@ class dmgContainer (folderContainer):
 			errStr = err.encode('utf-8')
 			err.release()
 			raise Exception('hdiutil failed to give properties about %s, gave error: %s' % (self.archiveFile, errStr))
+		
+		
 		
 		
 	
@@ -515,6 +535,10 @@ class dmgContainer (folderContainer):
 			else:
 				logging.debug('DMG %s already mounted at: %s' % (self.archiveFile, self._containerPath))
 			return
+		
+		# optionally let diskutility checksum the image
+		
+		# TODO: work here
 		
 		# create the mount point
 		if self.name:
@@ -587,6 +611,52 @@ class dmgContainer (folderContainer):
 		
 		logging.debug('Mounted DMG %s at: %s' % (self.name, self._containerPath))
 	
+	def unmount(self):
+		if self.mountObject and self._containerPath:
+			if self.name:
+				logging.debug('Unmounting disk image:	%s (%s) from: %s' % (self.name, self.archiveFile, self._containerPath))
+			else:
+				logging.debug('Unmounting disk image:	%s from: %s' % (self.archiveFile, self._containerPath))
+			
+			if loggedSubprocess(['/usr/bin/hdiutil', 'detach', self._containerPath]) != 0:
+				logging.warn('Force unmounting disk image:	%s from: %s' % (self.archiveFile, self._containerPath))
+				
+				loggedSubprocess(['/usr/bin/hdiutil', 'detach', '-force', self._containerPath], stdout=self.subprocess.PIPE, stderr=self.subprocess.PIPE)
+			self.mountObject = None
+			
+			if self.name:
+				logging.debug('Unmounted disk image:	%s (%s) from: %s' % (self.name, self.archiveFile, self._containerPath))
+			else:
+				logging.debug('Unmounted disk image:	%s from: %s' % (self.archiveFile, self._containerPath))
+			
+			self._containerPath = None
+	
+	def copyShadowFileToLocation(self, location):
+		if not(self.shadowFilePath):
+			if self.name:
+				raise Exception('Tried to copy the shadow file from a DMG without a shadow file: %s (%s)' % (self.name, self.archiveFile))
+			else:
+				raise Exception('Tried to copy the shadow file from a DMG without a shadow file: %s' % self.archiveFile)
+		self.unmount()
+		
+		targetDir = None
+		targetName = None
+		if os.path.isdir(location):
+			targetDir = location
+			targetName = os.path.basename(self.shadowFilePath)
+		
+		elif os.path.isdir( os.path.dirname(location) ):
+			targetDir = os.path.dirname(location)
+			targetName = os.path.basename(location)
+		
+		if targetDir == None:
+			raise Exception('Tried to copy the shadow file from a DMG to a location that does not exist: %s' % location)
+		
+		logging.debug3('Copying shadow file from: %s to: %s' % (self.shadowFilePath, location))
+		shutil.copyfile(self.shadowFilePath, os.path.join(targetDir, targetName))
+		
+		self.mount()
+	
 	def dmgAlreadyMounted(self):
 		hdiutilProcess = subprocess.Popen(['/usr/bin/hdiutil', 'info', '-plist'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		if hdiutilProcess.wait() != 0:
@@ -618,24 +688,7 @@ class dmgContainer (folderContainer):
 		''' Unmount DMG '''
 		
 		# unmount the dmg
-		if self.mountObject and self._containerPath:
-			if self.name:
-				logging.debug('Unmounting disk image:	%s (%s) from: %s' % (self.name, self.archiveFile, self._containerPath))
-			else:
-				logging.debug('Unmounting disk image:	%s from: %s' % (self.archiveFile, self._containerPath))
-			
-			if loggedSubprocess(['/usr/bin/hdiutil', 'detach', self._containerPath]) != 0:
-				logging.warn('Force unmounting disk image:	%s from: %s' % (self.archiveFile, self._containerPath))
-				
-				loggedSubprocess(['/usr/bin/hdiutil', 'detach', '-force', self._containerPath], stdout=self.subprocess.PIPE, stderr=self.subprocess.PIPE)
-			self.mountObject = None
-			
-			if self.name:
-				logging.debug('Unmounted disk image:	%s (%s) from: %s' % (self.name, self.archiveFile, self._containerPath))
-			else:
-				logging.debug('Unmounted disk image:	%s from: %s' % (self.archiveFile, self._containerPath))
-			
-			self._containerPath = None
+		self.unmount()
 			
 		# the mount point should take care of itself
 

@@ -43,23 +43,28 @@ logging.section('###### Start DMG test ######')
 dmgContainer.checksumAtMount = False
 dmgContainer.fsckAtMount = False
 
-with tempFolder():
+with tempFolder() as myTempFolder:
 
 	logging.process('Starting %s' % 'Test A')
 	with processObject(
+		extraArgument="bob",
 		containerType=dmgContainer, installerType=pkgInstaller,
 		name="TestA", source='testing/TestA/TestA.dmg', useShadowFile=True,
 		checksum='aeca2a04481fef3e7d79120f6744bfc92d22ba84') as testItem:
 				
 		for thisItem in testItem.listComponents():
 			logging.info('Installer item: %s' % thisItem)
+		
+		testItem.copyShadowFileToLocation( os.path.join(myTempFolder.path, "test.shadow") )
+		os.unlink(os.path.join(myTempFolder.path, "test.shadow"))
+	
 	logging.process('Done with %s' % 'Test A')
 	
 	logging.process('Starting %s' % 'Test B')
 	with processObject(
 		containerType=folderContainer, installerType=pkgInstaller,
 		name="TestB", source='testing/TestB/',
-		checksum='17dc6616ed1ab342d502453f919eab2891c43ef1') as testItem:
+		checksum='bd16bb4529e1789b303d1df1ee1cc980b7ffd536') as testItem:
 				
 		for thisItem in testItem.listComponents():
 			logging.info('Installer item: %s' % thisItem)

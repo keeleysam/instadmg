@@ -64,7 +64,7 @@ with tempFolder() as myTempFolder:
 	with processObject(
 		containerType=folderContainer, installerType=pkgInstaller,
 		name="TestB", source='testing/TestB/',
-		checksum='bd16bb4529e1789b303d1df1ee1cc980b7ffd536') as testItem:
+		checksum='688583043d274dd0b601d02cb10904626e12ebca') as testItem:
 				
 		for thisItem in testItem.listComponents():
 			logging.info('Installer item: %s' % thisItem)

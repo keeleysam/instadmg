@@ -23,24 +23,25 @@ Ideas that have not made it onto the list quite yet are on the [FutureIdeas Futu
   * ~~getopts~~
 
 1.5
-  * _Reduce path hardness_ - not sure what this means
   * ~~Logging changes~~
     * ~~More verbose debug log~~
     * ~~Tweaks in the console output~~
   * ~~Use chroot jails for non-OS installs~~
   * ~~Put a copy of the instal log inside the image~~
   * ~~Remove cruft from all temp areas~~ (more important with the chroot jail)
+  * ~~Compatibility with 10.6 as a host and target OS~~
+
+1.6
+  * ~~Detect the OS on installer disks~~
+  * ~~Handle multiple BaseOS disks (-I and -J flags)~~
 
 2.0 (no promises, just a wish list)
-  * Compatibility with 10.6 as a host and target OS
   * Merge InstaUp2Date into InstaDMG (remove the folder system)
   * Cleanup resources, even in a crash (or user initialed stop)
-  * Detect the OS on installer disks
-    * Possibly allow for different chains based on this number
+  * Possibly allow for different chains based on the installer used
   * Rewrite of createUser (make it into a factory)
   * Provide drag-and-drop dmgs from OS disks
     * Evaluate merging items from second disk
-  * Handle multiple BaseOS disks
   * Use sandboxing to isolate the host OS from any possible change
   * Evaluate a catalog of shadow files to correct installer defects
   * technique to handle installers that span multiple disks

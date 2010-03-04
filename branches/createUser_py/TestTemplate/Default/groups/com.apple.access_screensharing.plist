@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>generateduid</key>
+	<array>
+		<string>62CF0C13-CA22-444E-ABD7-C3B82F294FBA</string>
+	</array>
+	<key>gid</key>
+	<array>
+		<string>401</string>
+	</array>
+	<key>name</key>
+	<array>
+		<string>com.apple.access_screensharing</string>
+	</array>
+	<key>nestedgroups</key>
+	<array>
+		<string>ABCDEFAB-CDEF-ABCD-EFAB-CDEF00000050</string>
+	</array>
+	<key>realname</key>
+	<array>
+		<string>Screen Sharing ACL</string>
+	</array>
+</dict>
+</plist>

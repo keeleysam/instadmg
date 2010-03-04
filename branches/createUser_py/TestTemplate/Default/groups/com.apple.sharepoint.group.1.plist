@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>generateduid</key>
+	<array>
+		<string>0E41DF00-7038-413F-BB0F-A9A5D7EDEFDA</string>
+	</array>
+	<key>gid</key>
+	<array>
+		<string>402</string>
+	</array>
+	<key>groupmembers</key>
+	<array>
+		<string>76EA566D-7E17-4F79-9994-D1AD2141F300</string>
+	</array>
+	<key>name</key>
+	<array>
+		<string>com.apple.sharepoint.group.1</string>
+	</array>
+	<key>nestedgroups</key>
+	<array>
+		<string>ABCDEFAB-CDEF-ABCD-EFAB-CDEF00000014</string>
+		<string>ABCDEFAB-CDEF-ABCD-EFAB-CDEF0000000C</string>
+	</array>
+	<key>realname</key>
+	<array>
+		<string>Public</string>
+	</array>
+	<key>users</key>
+	<array>
+		<string>larkost</string>
+	</array>
+</dict>
+</plist>

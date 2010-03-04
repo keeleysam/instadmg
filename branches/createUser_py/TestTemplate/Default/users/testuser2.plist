@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>_writers_LinkedIdentity</key>
+	<array>
+		<string>testuser2</string>
+	</array>
+	<key>_writers_UserCertificate</key>
+	<array>
+		<string>testuser2</string>
+	</array>
+	<key>_writers_hint</key>
+	<array>
+		<string>testuser2</string>
+	</array>
+	<key>_writers_jpegphoto</key>
+	<array>
+		<string>testuser2</string>
+	</array>
+	<key>_writers_passwd</key>
+	<array>
+		<string>testuser2</string>
+	</array>
+	<key>_writers_picture</key>
+	<array>
+		<string>testuser2</string>
+	</array>
+	<key>_writers_realname</key>
+	<array>
+		<string>testuser2</string>
+	</array>
+	<key>authentication_authority</key>
+	<array>
+		<string>;ShadowHash;</string>
+		<string>;Kerberosv5;;test@LKDC:SHA1.DBEFDF78CDC33878631FB342A841CB1C82F5AD76;LKDC:SHA1.DBEFDF78CDC33878631FB342A841CB1C82F5AD76;</string>
+	</array>
+	<key>generateduid</key>
+	<array>
+		<string>771E7B88-7762-4907-8584-E38C0212F8E5</string>
+	</array>
+	<key>gid</key>
+	<array>
+		<string>20</string>
+	</array>
+	<key>hint</key>
+	<array/>
+	<key>home</key>
+	<array>
+		<string>/Users/testuser2</string>
+	</array>
+	<key>name</key>
+	<array>
+		<string>testuser2</string>
+	</array>
+	<key>passwd</key>
+	<array>
+		<string>********</string>
+	</array>
+	<key>picture</key>
+	<array>
+		<string>/Library/User Pictures/Animals/Eagle.tif</string>
+	</array>
+	<key>realname</key>
+	<array>
+		<string>Test User 2</string>
+	</array>
+	<key>shell</key>
+	<array>
+		<string>/bin/bash</string>
+	</array>
+	<key>uid</key>
+	<array>
+		<string>503</string>
+	</array>
+</dict>
+</plist>

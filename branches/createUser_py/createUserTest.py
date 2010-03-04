@@ -1,12 +1,47 @@
 #!/usr/bin/env python
 
-import os, unittest
+import os, unittest, sys, shutil, atexit, tempfile
 from createUser import createUser
 
-class userTests(unittest.TestCase):
+
+class createUserTests(unittest.TestCase):
+	
+	tempFolder = None
+	createUserItem = None
+	
+	def __entry__(self):
+		pass
+	
+	def removeTempFolder(self, folderPath):
+		if os.path.isdir(folderPath):
+			shutil.rmtree(folderPath)
+			self.tempFolder = None
 	
 	def setUp(self):
-		self.createUserItem = createUser()
+		# setup a temp folder
+		self.tempFolder = tempfile.mkdtemp(dir="/tmp", prefix="createUserTest")
+		# ensure that it gets disposed of
+		atexit.register(self.removeTempFolder, self.tempFolder)
+		
+		# copy the testing template into place
+		shutil.copytree(os.path.join(os.path.dirname(sys.argv[0]), "TestTemplate/Default") , os.path.join(self.tempFolder, "Default"))
+		
+		self.createUserItem = createUser(pathToDSLocalNode=os.path.join(self.tempFolder, "Default"))
+	
+	def tearDown(self):
+		if self.tempFolder != None:
+			self.removeTempFolder(self.tempFolder)
+		self.createUserItem == None
+	
+	def __exit__(self):
+		if self.tempFolder != None:
+			self.removeTempFolder(self.tempFolder)
+	
+
+class userTests(createUserTests):
+	
+	def setUp(self):
+		self.createUserItem = createUser( pathToDSLocalNode=os.path.join(os.path.dirname(sys.argv[0]), "TestTemplate/Default") )
 			
 	def test_create(self):
 		self.assert_(self.createUserItem is not None, "Unable to instantiate createUser")
@@ -38,11 +73,16 @@ class userTests(unittest.TestCase):
 		self.assertTrue(rootUserInfoByName == None, "Got a user for uid -1, this is wrong")
 	
 	def test_nextAvalibleUID(self):
+		expectedResult = 504
+		
 		firstRun = self.createUserItem.nextAvalibleUID()
 		self.assertTrue(isinstance(firstRun, int), "Result of getNextAvalibleUID is not a number")
+		self.assertEqual(firstRun, expectedResult, "Result of getNextAvalibleUID is not the expeted number: %i but rather %i" % (expectedResult, firstRun))
 		
 		# make sure that we get the same value if we run twice
-		self.assertEqual(firstRun, self.createUserItem.nextAvalibleUID(), "Results of two sequential runs of nextAvalibleUID do not return the same value")
+		secondRun = self.createUserItem.nextAvalibleUID()
+		self.assertTrue(isinstance(secondRun, int), "Result of second run of getNextAvalibleUID is not a number")
+		self.assertEqual(firstRun, secondRun, "Results of two sequential runs of nextAvalibleUID do not return the same value, but rather %i and %i" % (firstRun, secondRun))
 	
 	def test_nextAvalibleUID_negatives(self):
 		self.assertRaises(AssertionError, self.createUserItem.nextAvalibleUID, startNumber="not a number")
@@ -51,11 +91,8 @@ class userTests(unittest.TestCase):
 		self.assertRaises(AssertionError, self.createUserItem.nextAvalibleUID, endNumber=-1)
 		self.assertRaises(AssertionError, self.createUserItem.nextAvalibleUID, startNumber=4, endNumber=3)
 
-class groupTests(unittest.TestCase):
-	
-	def setUp(self):
-		self.createUserItem = createUser()
-	
+class groupTests(createUserTests):
+
 	def test_getGroupName(self):
 		self.assertEqual("wheel", self.createUserItem.getGroupName(0), "getGroupName could not identify the group wheel by id")
 		self.assertEqual("wheel", self.createUserItem.getGroupName("wheel"), "getGroupName could not identify the group wheel by name")
@@ -89,6 +126,7 @@ class groupTests(unittest.TestCase):
 		self.assertRaises(AssertionError, self.createUserItem.findNextAvalibleGID, endNumber="not a number")
 		self.assertRaises(AssertionError, self.createUserItem.findNextAvalibleGID, endNumber=-1)
 		self.assertRaises(AssertionError, self.createUserItem.findNextAvalibleGID, startNumber=4, endNumber=3)
+
 	
 if __name__ == "__main__":
 	unittest.main()

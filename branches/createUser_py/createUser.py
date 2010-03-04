@@ -6,15 +6,31 @@ import subprocess, Foundation
 
 class createUser:
 	
-	pathToRoot = "/"
-	relativePathTodsclPath = "usr/bin/dscl"
-	relativePathToDSLocal = "private/var/db/dslocal/nodes/Default"
+	pathToRoot			= None
+	pathToDSLocalNode	= None
+	dsTargetPathPrefix	= None
+	
+	relativePathToDSCLPath = "usr/bin/dscl"
+	
+	def __init__(self, pathToRoot="/", pathToDSLocalNode="private/var/db/dslocal/nodes/Default", dsTargetPathPrefix="/Local/Target/"):
+		
+		assert isinstance(pathToRoot, str)
+		assert isinstance(pathToDSLocalNode, str)
+		assert isinstance(dsTargetPathPrefix, str)
+		
+		self.pathToRoot = os.path.abspath(pathToRoot)
+		self.pathToDSLocalNode = os.path.abspath( os.path.join(pathToRoot, pathToDSLocalNode) )
+		self.dsTargetPathPrefix = dsTargetPathPrefix
+		
+		assert os.path.isdir(self.pathToRoot), "The root path must lead to a directory: %s" % self.pathToRoot
+		assert os.path.isdir(self.pathToDSLocalNode), "The DSLocal node is not a folder: %s" % self.pathToDSLocalNode
+		
 	
 	def pathToDscl(self):
-		return os.path.join(self.pathToRoot, self.relativePathTodsclPath)
+		return os.path.join(self.pathToRoot, self.relativePathToDSCLPath)
 	
 	def pathToDSLocal(self):
-		return os.path.join(self.pathToRoot, self.relativePathToDSLocal)
+		return self.pathToDSLocalNode
 	
 	def dsclCommandPrefix(self):
 		''' The common first section of the dscl commands '''
@@ -25,7 +41,7 @@ class createUser:
 	def userNameAtUID(self, uid):
 		assert isinstance(uid, int), "UID must be an integer"
 		
-		dsclCommand = self.dsclCommandPrefix() + ["-search", "/Local/Default/Users", "uid", str(uid)]
+		dsclCommand = self.dsclCommandPrefix() + ["-search", self.dsTargetPathPrefix + "Users", "uid", str(uid)]
 		dsclProcess = subprocess.Popen(dsclCommand, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		
 		if dsclProcess.wait() != 0:
@@ -42,7 +58,7 @@ class createUser:
 	def getUserInformationAtUserName(self, userName):
 		assert isinstance(userName, str), "UserName must be a string"
 		
-		dsclCommand = self.dsclCommandPrefix() + ["-read", "/Local/Default/Users/" + userName]
+		dsclCommand = self.dsclCommandPrefix() + ["-read", self.dsTargetPathPrefix + "Users/" + userName]
 		dsclProcess = subprocess.Popen(dsclCommand, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		
 		dsclOutput = dsclProcess.stdout.read()
@@ -90,7 +106,7 @@ class createUser:
 			assert groupIdentifier >= 0, "GIDs can only be positive"
 			# this can only be a GID
 			
-			dsclCommand = self.dsclCommandPrefix() + ["-search", "/Local/Default/Groups", "gid", str(groupIdentifier)]
+			dsclCommand = self.dsclCommandPrefix() + ["-search", self.dsTargetPathPrefix + "Groups", "gid", str(groupIdentifier)]
 			dsclProcess = subprocess.Popen(dsclCommand, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 			
 			if dsclProcess.wait() != 0:
@@ -110,7 +126,7 @@ class createUser:
 			# this could be either a UUID, or more likely a group name
 			
 			# try a group name
-			dsclCommand = self.dsclCommandPrefix() + ["-read", "/Local/Default/Groups/" + groupIdentifier]
+			dsclCommand = self.dsclCommandPrefix() + ["-read", self.dsTargetPathPrefix + "Groups/" + groupIdentifier]
 			dsclProcess = subprocess.Popen(dsclCommand, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 			
 			if dsclProcess.wait() == 0:
@@ -119,7 +135,7 @@ class createUser:
 				
 			else:
 				# try this as a UUID
-				dsclCommand = self.dsclCommandPrefix() + ["-search", "/Local/Default/Groups", "GeneratedUID", groupIdentifier]
+				dsclCommand = self.dsclCommandPrefix() + ["-search", self.dsTargetPathPrefix + "Groups", "GeneratedUID", groupIdentifier]
 				dsclProcess = subprocess.Popen(dsclCommand, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 								
 				dsclOutput = dsclProcess.stdout.read()
@@ -141,7 +157,7 @@ class createUser:
 		if groupName is None:
 			return None
 		
-		dsclCommand = self.dsclCommandPrefix() + ["-read", "/Local/Default/Groups/" + groupName]
+		dsclCommand = self.dsclCommandPrefix() + ["-read", self.dsTargetPathPrefix + "Groups/" + groupName]
 		dsclProcess = subprocess.Popen(dsclCommand, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		
 		dsclOutput = dsclProcess.stdout.read()

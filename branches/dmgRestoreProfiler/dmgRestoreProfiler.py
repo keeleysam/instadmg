@@ -46,12 +46,51 @@ def secondsToReadableTime(seconds):
 	
 	return responce.strip()
 
-def mountDMG(thisSourceFile):
+def mountDMG(thisSourceFile, mountPoint=None):
+	
+	# ToDo: handle the case when mountPoint is not given
+	
+	print('	Mounting: %s at %s' % (thisSourceFile, mountPoint))
+	
+	command = ['/usr/bin/hdiutil', 'attach', '-mountpoint', mountPoint, '-noverify', '-noautofsck', '-nobrowse', '-owners', 'on', '-readonly', '-plist', thisSourceFile]
+	process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	if process.wait() != 0:
+		raise Exception('Unable to mount the image: %s\nCommand: %s\nOutput: %s\nError: %s' % (thisSourceFile, " ".join(command), process.stdout.read(), process.stderr.read()))
+	
+	output = process.stdout.read()
+	
+	# convert the plist into useable objects
+	plistNSData = Foundation.NSString.stringWithString_(output).dataUsingEncoding_(Foundation.NSUTF8StringEncoding)
+	plist, format, error = Foundation.NSPropertyListSerialization.propertyListFromData_mutabilityOption_format_errorDescription_(plistNSData, Foundation.NSPropertyListImmutable, None, None)
+	if error is not None:
+		errStr = error.encode('utf-8')
+		error.release()
+		raise Exception('Unable to mount image: %s\nError: %s' % (thisSourceFile, errStr))
+	
+	# find the path it is mounted at
+	if not 'system-entities' in plist:
+		raise Exception('hdiutil output did not look right on mount. Data:\n%s' % output)
+	
+	for systemEntry in plist['system-entities']:
+		if 'mount-point' in systemEntry:
+			return systemEntry['mount-point']
+	
+	# if we get here, then we have failed
+	raise Exception('Unable to figure out the mount point for: %s\n%s' % (thisSourceFile, output))
 
-	return "test"
-
-def unmountDMG(target):
-	pass
+def unmountDMG(mountPoint):
+	
+	print('	Unmounting: %s' % mountPoint)
+	
+	if not os.path.ismount(mountPoint):
+		raise Exception('The item "%s" was not a mount point, so it can not be unmounted' % mountPoint)
+	
+	command = ['/usr/bin/hdiutil', 'eject', mountPoint]
+	if subprocess.call(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE) != 0:
+		print('The image did not unmount cleanly, forcing: %s' % mountPoint)
+		
+		command = ['/usr/bin/hdiutil', 'eject', '-force', mountPoint]
+		subprocess.call(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 def isValidDMG(pathToDGM):
 	hdiutilCommand = ["/usr/bin/hdiutil", "imageinfo", pathToDGM]
@@ -269,14 +308,6 @@ if __name__ == "__main__":
 	# process things
 	for thisSourceFile in sourceFiles.keys():
 		
-		# imagescan options
-		#	no checksum
-		#	--filechecksum
-		
-		# asr buffers
-		
-		#setup
-		
 		# create a tempfile for hdiutil to write onto
 		tempFileObject, hdiutilOutfilePath = tempfile.mkstemp(suffix=".dmg", prefix=os.path.basename(sys.argv[0]), dir="/tmp")
 		os.close(tempFileObject)
@@ -297,23 +328,32 @@ if __name__ == "__main__":
 		]
 		
 		# asr scanning options
+		asrImagescanOptions = [
+			{"message":" without file checksums ", "command":[]},
+			{"message":" with file checksums ", "command":["--filechecksum"]}
+			# ToDo: play with buffers
+		]
+		
+		# ToDo: play with buffers 
 		
 		for thisSourceOption in sourceOptions:
 			print("\n" + thisSourceOption["message"] + "\n------------------")
 			
 			if "mountImage" in thisSourceOption and thisSourceOption["mountImage"] == True:
-				mountDMG(thisSourceFile)
+				mountDMG(thisSourceFile, mountPoint=tempMountPoint)
 			
 			for thisOutputOption in outputOptions:
 				
 				# make sure that there is something at the output location
 				open(hdiutilOutfilePath, "w").close()
 				
-				hdiutilCommand = thisSourceOption["command"] + thisOutputOption["command"]
-				print("\t" + thisSourceOption["message"] + thisOutputOption["message"] + "\n\t\tCommand: " + " ".join(hdiutilCommand))
+				print("\t" + thisSourceOption["message"] + thisOutputOption["message"])
+				command = thisSourceOption["command"] + thisOutputOption["command"]
+				print("\t\tCommand: " + " ".join(command))
+				
 				startTime = time.time()
-				# ToDo: run the conversion and time it
-				print("\t\tRun took %s" % secondsToReadableTime(startTime - time.time()))
+				subprocess.check_call(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+				print("\t\tConversion took: %s\n" % secondsToReadableTime(startTime - time.time()))
 				
 				asrTargetFile = None
 				
@@ -329,12 +369,45 @@ if __name__ == "__main__":
 					
 					shutil.copyfile(hdiutilOutfilePath, asrTargetFile)
 				
-				# do asr work here
+				# asr scan the image
+				for scanOption in asrImagescanOptions:
 				
-				os.unlink(asrTargetFile)
+					# copy the image if this is not the last item
+					asrInnerTargetFile = None
+					if scanOption == asrImagescanOptions[len(asrImagescanOptions) - 1]:
+						# if it is the last round in this one, no need to copy things
+						tempFileObject, asrInnerTargetFile = tempfile.mkstemp(suffix=".dmg", prefix=os.path.basename(sys.argv[0]), dir="/tmp")
+						os.close(tempFileObject)
+						
+						shutil.copyfile(asrTargetFile, asrInnerTargetFile)
+					else:
+						asrInnerTargetFile = asrTargetFile
+					
+					print('\t\tASR scanning image %s' % scanOption['message'])
+					command = ['/usr/sbin/asr', 'imagescan'] + scanOption['command'] + [asrInnerTargetFile]
+					print('\t\t\tCommand: ' + ' '.join(command))
+					
+					startTime = time.time()
+					subprocess.check_call(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+					print("\t\t\tScan took: %s\n" % secondsToReadableTime(startTime - time.time()))
+					
+					# restore the image
+					# ToDo: play with asr options more
+					print('\t\t\tASR restoring image')
+					command = ['/usr/sbin/asr', 'restore', '--source', asrInnerTargetFile, '--target', restorePoint]
+					print('\t\t\t\tCommand: ' + ' '.join(command))
+					
+					startTime = time.time()
+					subprocess.check_call(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+					print("\t\t\t\tRestore took: %s\n" % secondsToReadableTime(startTime - time.time()))
+					
+					# cleanup
+					os.unlink(asrInnerTargetFile) # cleanup the innerTargetFile
+					
+				os.unlink(asrTargetFile) # cleanup the targetFile
 			
 			if "mountImage" in thisSourceOption and thisSourceOption["mountImage"] == True:
-				unmountDMG(thisSourceFile)
+				unmountDMG(tempMountPoint)
 				
 	sys.exit(0)
 

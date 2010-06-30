@@ -1,0 +1,3 @@
+cc1obj: warning: -Wuninitialized is not supported without -O
+/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m:171: warning: incomplete implementation of class 'installerItem'
+/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m:171: warning: method definition for '-addChoicesDataToArray:' not found

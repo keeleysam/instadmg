@@ -1,0 +1,556 @@
+TInstallerChoicesHelper
+v7
+r0
+t290832857.001223
+cCheck dependencies
+cProcessInfoPlistFile "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Info.plist" InstallerChoicesHelper-Info.plist
+cCopyStringsFile "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
+cCompileXIB "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/English.lproj/MainMenu.xib"
+cCpResource build/Release/InstallerChoicesHelper.app/Contents/Resources/targetImage.pdf targetImage.pdf
+cProcessPCH /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gkszgiycypajxeefddehohoecygp/InstallerChoicesHelper_Prefix.pch.pth InstallerChoicesHelper_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gakkcifascapzpbcfthfavropnuk/InstallerChoicesHelper_Prefix.pch.pth InstallerChoicesHelper_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-hkahwearqckjhjgvokdfyffwtncf/InstallerChoicesHelper_Prefix.pch.gch InstallerChoicesHelper_Prefix.pch normal ppc objective-c com.apple.compilers.llvmgcc42
+cCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/main.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/installerChoicesParser.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/installerItem.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/selectedPackageView.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/main.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/InstallerChoicesHelper" normal x86_64
+cCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/installerChoicesParser.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/installerItem.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/selectedPackageView.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/main.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m" normal ppc objective-c com.apple.compilers.llvmgcc42
+cCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/installerChoicesParser.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m" normal ppc objective-c com.apple.compilers.llvmgcc42
+cCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/installerItem.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m" normal ppc objective-c com.apple.compilers.llvmgcc42
+cCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/selectedPackageView.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m" normal ppc objective-c com.apple.compilers.llvmgcc42
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004A769DAB00000000000000EE
+t1249287595
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/asl.h
+c000000004A5C14A6000000000000359D
+t1247548582
+s13725
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/English.lproj/InfoPlist.strings
+c000000004AC416DB000000000000002D
+t1254364891
+s45
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/English.lproj/MainMenu.xib
+c000000004BA460BB0000000000035960
+t1269063867
+s219488
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/InstallerChoicesHelper_Prefix.pch
+c000000004AC416DB00000000000000AF
+t1254364891
+s175
+i<Cocoa/Cocoa.h>
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/InstallerChoicesHelper
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/InstallerChoicesHelper.LinkFileList
+c000000004BA58A5200000000000002A6
+t1269140050
+s678
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/installerChoicesParser.o
+t1269140056
+s9400
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/installerItem.o
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/main.o
+t1269140056
+s1860
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/selectedPackageView.o
+t1269140056
+s10204
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/InstallerChoicesHelper
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/InstallerChoicesHelper.LinkFileList
+c000000004BA58A5200000000000002A2
+t1269140050
+s674
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/installerChoicesParser.o
+t1269140056
+s16652
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/installerItem.o
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/main.o
+t1269140056
+s1944
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/selectedPackageView.o
+t1269140056
+s14952
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/InstallerChoicesHelper
+t1269140056
+s36352
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/InstallerChoicesHelper.LinkFileList
+c000000004BA58A5200000000000002AE
+t1269140050
+s686
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/installerChoicesParser.o
+t1269140055
+s16368
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/installerItem.o
+t1269140056
+s21280
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/main.o
+t1269140055
+s2128
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/selectedPackageView.o
+t1269140056
+s17000
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/StaticAnalyzer/normal/i386/installerChoicesParser.plist
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/StaticAnalyzer/normal/i386/installerItem.plist
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/StaticAnalyzer/normal/i386/main.plist
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/StaticAnalyzer/normal/i386/selectedPackageView.plist
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/StaticAnalyzer/normal/x86_64/installerChoicesParser.plist
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/StaticAnalyzer/normal/x86_64/installerItem.plist
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/StaticAnalyzer/normal/x86_64/main.plist
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/StaticAnalyzer/normal/x86_64/selectedPackageView.plist
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app
+t1269140050
+s102
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app.dSYM
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Info.plist
+t1269140050
+s931
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/MacOS/InstallerChoicesHelper
+t2
+s0
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/PkgInfo
+t1269140050
+s8
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1269140050
+s92
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Resources/English.lproj/MainMenu.nib
+t1269140051
+s44724
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Resources/targetImage.pdf
+t1269140050
+s239169
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/improvedLog.h
+c000000004BA4447D0000000000000637
+t1269056637
+s1591
+i<asl.h>
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.h
+c000000004BA43E4F00000000000002BC
+t1269055055
+s700
+i<Cocoa/Cocoa.h>
+i"installerItem.h"
+i"improvedLog.h"
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m
+c000000004BA451460000000000000A4B
+t1269059910
+s2635
+i"installerChoicesParser.h"
+i"improvedLog.h"
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.h
+c000000004BA45B8B00000000000003D2
+t1269062539
+s978
+i<Cocoa/Cocoa.h>
+i"improvedLog.h"
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m
+c000000004BA45C130000000000000B79
+t1269062675
+s2937
+i"installerItem.h"
+i"improvedLog.h"
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m
+c000000004AC416DB000000000000010C
+t1254364891
+s268
+i<Cocoa/Cocoa.h>
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.h
+c000000004BA458E6000000000000025F
+t1269061862
+s607
+i<Cocoa/Cocoa.h>
+i"installerChoicesParser.h"
+i"improvedLog.h"
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m
+c000000004BA5890200000000000009DD
+t1269139714
+s2525
+i"selectedPackageView.h"
+
+N/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/targetImage.pdf
+c000000004AC90EB8000000000003A641
+t1254690488
+s239169
+
+N/var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gakkcifascapzpbcfthfavropnuk/InstallerChoicesHelper_Prefix.pch.pth
+t1269140052
+s8107236
+
+N/var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gkszgiycypajxeefddehohoecygp/InstallerChoicesHelper_Prefix.pch.pth
+t1269140052
+s7463732
+
+N/var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-hkahwearqckjhjgvokdfyffwtncf/InstallerChoicesHelper_Prefix.pch.gch
+t1269140055
+s38946384
+
+NInstallerChoicesHelper-Info.plist
+c000000004AC416DB00000000000003EA
+t1254364891
+s1002
+
+CAnalyze "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m"
+r0
+
+CAnalyze "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m"
+r0
+
+CAnalyze "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m"
+r0
+
+CAnalyze "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m"
+r0
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies290832850#290832850#0(0"0(0#1#0"7812726606361675776#0"0#
+
+CCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/installerChoicesParser.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s290832856.232313
+e290832856.332824
+r1
+xCompileC
+xbuild/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/installerChoicesParser.o
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@92"Compile /Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m290832856#290832856#0(0"0(0#0#84"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m4300885448#2123"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/i386" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -include /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gakkcifascapzpbcfthfavropnuk/InstallerChoicesHelper_Prefix.pch -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m" -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/installerChoicesParser.o"0#
+
+CCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/installerItem.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s290832856.327951
+e290832856.383498
+r0
+xCompileC
+xbuild/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/installerItem.o
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m:16:13: error: synthesized property 'choiceTitleColor' must either be named the same as a compatible ivar or must explicitly name an ivar
+o @synthesize choiceTitleColor;
+o             ^
+o1 diagnostic generated.
+lSLF07#2@83"Compile /Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m290832856#290832856#0(259"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m:16:13: error: synthesized property 'choiceTitleColor' must either be named the same as a compatible ivar or must explicitly name an ivar @synthesize choiceTitleColor;             ^1(4@122"Synthesized property 'choiceTitleColor' must either be named the same as a compatible ivar or must explicitly name an ivar290832856#0#213#0(6@75"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m290755475#16#13#0#0#105"synthesized property * must either be named the same as a compatible ivar or must explicitly name an ivar0(0#0#75"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m4300885448#2105"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/i386" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -include /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gakkcifascapzpbcfthfavropnuk/InstallerChoicesHelper_Prefix.pch -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m" -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/installerItem.o"1#
+
+CCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/main.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s290832856.127616
+e290832856.327861
+r1
+xCompileC
+xbuild/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/main.o
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@74"Compile /Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m290832856#290832856#0(0"0(0#0#66"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m4300885448#2087"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/i386" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -include /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gakkcifascapzpbcfthfavropnuk/InstallerChoicesHelper_Prefix.pch -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m" -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/main.o"0#
+
+CCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/selectedPackageView.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s290832856.332915
+e290832856.511702
+r1
+xCompileC
+xbuild/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/selectedPackageView.o
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@89"Compile /Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m290832856#290832856#0(0"0(0#0#81"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m4300885448#2117"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/i386" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -include /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gakkcifascapzpbcfthfavropnuk/InstallerChoicesHelper_Prefix.pch -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m" -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/selectedPackageView.o"0#
+
+CCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/installerChoicesParser.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m" normal ppc objective-c com.apple.compilers.llvmgcc42
+s290832856.511792
+e290832856.811045
+r1
+xCompileC
+xbuild/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/installerChoicesParser.o
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m
+xnormal
+xppc
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@92"Compile /Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m290832856#290832856#0(0"0(0#0#84"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m4300885448#2127"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -mtune=G5 -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/ppc" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -isysroot /Developer/SDKs/MacOSX10.6.sdk -include /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-hkahwearqckjhjgvokdfyffwtncf/InstallerChoicesHelper_Prefix.pch -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m" -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/installerChoicesParser.o"0#
+
+CCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/installerItem.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m" normal ppc objective-c com.apple.compilers.llvmgcc42
+s290832856.705805
+e290832856.838343
+r0
+xCompileC
+xbuild/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/installerItem.o
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m
+xnormal
+xppc
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+o/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m:16: error: synthesized property 'choiceTitleColor' must either be named the same as a compatible ivar or must explicitly name an ivar
+lSLF07#2@83"Compile /Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m290832856#290832856#0(210"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m:16: error: synthesized property 'choiceTitleColor' must either be named the same as a compatible ivar or must explicitly name an ivar1(4@122"Synthesized property 'choiceTitleColor' must either be named the same as a compatible ivar or must explicitly name an ivar290832856#0#210#0(6@75"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m290755475#16#0#16#0#0"0(0#0#75"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m4300885448#2109"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -mtune=G5 -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/ppc" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -isysroot /Developer/SDKs/MacOSX10.6.sdk -include /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-hkahwearqckjhjgvokdfyffwtncf/InstallerChoicesHelper_Prefix.pch -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m" -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/installerItem.o"1#
+
+CCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/main.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m" normal ppc objective-c com.apple.compilers.llvmgcc42
+s290832856.383578
+e290832856.705700
+r1
+xCompileC
+xbuild/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/main.o
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m
+xnormal
+xppc
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@74"Compile /Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m290832856#290832856#0(0"0(0#0#66"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m4300885448#2091"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -mtune=G5 -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/ppc" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -isysroot /Developer/SDKs/MacOSX10.6.sdk -include /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-hkahwearqckjhjgvokdfyffwtncf/InstallerChoicesHelper_Prefix.pch -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m" -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/main.o"0#
+
+CCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/selectedPackageView.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m" normal ppc objective-c com.apple.compilers.llvmgcc42
+s290832856.811134
+e290832857.001130
+r1
+xCompileC
+xbuild/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/selectedPackageView.o
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m
+xnormal
+xppc
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+o/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m: In function '-[selectedPackageView draggingEntered:]':
+o/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m:25: warning: unused variable 'bob'
+lSLF07#2@89"Compile /Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m290832856#290832857#0(255"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m: In function '-[selectedPackageView draggingEntered:]':/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m:25: warning: unused variable 'bob'1(22@21"Unused variable 'bob'290832856#138#117#0(6@81"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m290832514#25#0#25#0#19"unused variable '*'0(0#0#81"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m4300885448#2121"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -mtune=G5 -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/ppc" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -isysroot /Developer/SDKs/MacOSX10.6.sdk -include /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-hkahwearqckjhjgvokdfyffwtncf/InstallerChoicesHelper_Prefix.pch -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m" -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/selectedPackageView.o"0#
+
+CCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/installerChoicesParser.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s290832855.880440
+e290832855.998205
+r1
+xCompileC
+xbuild/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/installerChoicesParser.o
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@92"Compile /Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m290832855#290832855#0(0"0(0#0#84"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m4300885448#2129"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/x86_64" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -include /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gkszgiycypajxeefddehohoecygp/InstallerChoicesHelper_Prefix.pch -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerChoicesParser.m" -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/installerChoicesParser.o"0#
+
+CCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/installerItem.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s290832855.978982
+e290832856.127514
+r1
+xCompileC
+xbuild/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/installerItem.o
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@83"Compile /Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m290832855#290832856#0(0"0(0#0#75"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m4300885448#2111"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/x86_64" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -include /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gkszgiycypajxeefddehohoecygp/InstallerChoicesHelper_Prefix.pch -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/installerItem.m" -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/installerItem.o"0#
+
+CCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/main.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s290832855.879459
+e290832855.978893
+r1
+xCompileC
+xbuild/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/main.o
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@74"Compile /Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m290832855#290832855#0(0"0(0#0#66"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m4300885448#2093"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/x86_64" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -include /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gkszgiycypajxeefddehohoecygp/InstallerChoicesHelper_Prefix.pch -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/main.m" -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/main.o"0#
+
+CCompileC build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/selectedPackageView.o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s290832855.998305
+e290832856.140567
+r1
+xCompileC
+xbuild/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/selectedPackageView.o
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@89"Compile /Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m290832855#290832856#0(0"0(0#0#81"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m4300885448#2123"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/x86_64" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -include /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gkszgiycypajxeefddehohoecygp/InstallerChoicesHelper_Prefix.pch -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/selectedPackageView.m" -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/selectedPackageView.o"0#
+
+CCompileXIB "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/English.lproj/MainMenu.xib"
+s290832850.873253
+e290832851.675180
+r1
+xCompileXIB
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/English.lproj/MainMenu.xib
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib290832850#290832851#0(0"0(0#0#86"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/English.lproj/MainMenu.xib4300885448#413"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Resources/English.lproj/MainMenu.nib" "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/English.lproj/MainMenu.xib"0#
+
+CCopyStringsFile "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
+s290832850.865737
+e290832850.967664
+r1
+xCopyStringsFile
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings290832850#290832850#0(0"0(0#0#91"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/English.lproj/InfoPlist.strings4300885448#428"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Resources/English.lproj"0#
+
+CCpResource build/Release/InstallerChoicesHelper.app/Contents/Resources/targetImage.pdf targetImage.pdf
+s290832850.967744
+e290832850.974966
+r1
+xCpResource
+xbuild/Release/InstallerChoicesHelper.app/Contents/Resources/targetImage.pdf
+xtargetImage.pdf
+lSLF07#2@20"Copy targetImage.pdf290832850#290832850#0(0"0(0#0#75"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/targetImage.pdf4300885448#438"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/targetImage.pdf" "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Resources"0#
+
+CCreateUniversalBinary "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/MacOS/InstallerChoicesHelper" normal "x86_64 i386 ppc"
+r0
+
+CGenerateDSYMFile "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app.dSYM" "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/MacOS/InstallerChoicesHelper"
+r0
+
+CLd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/i386/InstallerChoicesHelper" normal i386
+r0
+
+CLd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/ppc/InstallerChoicesHelper" normal ppc
+r0
+
+CLd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/InstallerChoicesHelper" normal x86_64
+s290832856.140660
+e290832856.232211
+r1
+xLd
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/InstallerChoicesHelper
+xnormal
+xx86_64
+lSLF07#2@181"Link /Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/InstallerChoicesHelper290832856#290832856#0(0"0(0#0#0"4300885448#788"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/clang -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk "-L/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" -filelist "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/InstallerChoicesHelper.LinkFileList" -mmacosx-version-min=10.6 -dead_strip -framework Cocoa -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/Objects-normal/x86_64/InstallerChoicesHelper"0#
+
+CProcessInfoPlistFile "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Info.plist" InstallerChoicesHelper-Info.plist
+s290832850.806568
+e290832850.865625
+r1
+xProcessInfoPlistFile
+x/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Info.plist
+xInstallerChoicesHelper-Info.plist
+lSLF07#2@41"Process InstallerChoicesHelper-Info.plist290832850#290832850#0(0"0(0#0#93"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/InstallerChoicesHelper-Info.plist8391171791329129472#428"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    builtin-infoPlistUtility InstallerChoicesHelper-Info.plist -genpkginfo "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/PkgInfo" -expandbuildsettings -platform macosx -o "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app/Contents/Info.plist"0#
+
+CProcessPCH /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gakkcifascapzpbcfthfavropnuk/InstallerChoicesHelper_Prefix.pch.pth InstallerChoicesHelper_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s290832851.677200
+e290832852.955898
+r1
+xProcessPCH
+x/var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gakkcifascapzpbcfthfavropnuk/InstallerChoicesHelper_Prefix.pch.pth
+xInstallerChoicesHelper_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@44"Precompile InstallerChoicesHelper_Prefix.pch290832851#290832853#0(0"0(0#0#93"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/InstallerChoicesHelper_Prefix.pch4300885448#1955"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/i386" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/InstallerChoicesHelper_Prefix.pch" -o /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gakkcifascapzpbcfthfavropnuk/InstallerChoicesHelper_Prefix.pch.pth0#
+
+CProcessPCH /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gkszgiycypajxeefddehohoecygp/InstallerChoicesHelper_Prefix.pch.pth InstallerChoicesHelper_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s290832851.675304
+e290832852.746267
+r1
+xProcessPCH
+x/var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gkszgiycypajxeefddehohoecygp/InstallerChoicesHelper_Prefix.pch.pth
+xInstallerChoicesHelper_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@44"Precompile InstallerChoicesHelper_Prefix.pch290832851#290832852#0(0"0(0#0#93"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/InstallerChoicesHelper_Prefix.pch4300885448#1959"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/x86_64" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/InstallerChoicesHelper_Prefix.pch" -o /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-gkszgiycypajxeefddehohoecygp/InstallerChoicesHelper_Prefix.pch.pth0#
+
+CProcessPCH /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-hkahwearqckjhjgvokdfyffwtncf/InstallerChoicesHelper_Prefix.pch.gch InstallerChoicesHelper_Prefix.pch normal ppc objective-c com.apple.compilers.llvmgcc42
+s290832852.746416
+e290832855.879286
+r1
+xProcessPCH
+x/var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-hkahwearqckjhjgvokdfyffwtncf/InstallerChoicesHelper_Prefix.pch.gch
+xInstallerChoicesHelper_Prefix.pch
+xnormal
+xppc
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@44"Precompile InstallerChoicesHelper_Prefix.pch290832852#290832855#0(0"0(0#0#93"/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/InstallerChoicesHelper_Prefix.pch4300885448#1960"    cd "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x objective-c-header -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wswitch -Wunused-variable -Wshadow -isysroot /Developer/SDKs/MacOSX10.6.sdk -mtune=G5 -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-generated-files.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-own-target-headers.hmap" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-all-target-headers.hmap" -iquote "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/InstallerChoicesHelper-project-headers.hmap" "-F/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/include" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources/ppc" "-I/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/InstallerChoicesHelper.build/Release/InstallerChoicesHelper.build/DerivedSources" -isysroot /Developer/SDKs/MacOSX10.6.sdk -c "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/InstallerChoicesHelper_Prefix.pch" -o /var/folders/Ri/RidKPLsLHraNZB4h6I5n+++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InstallerChoicesHelper_Prefix-hkahwearqckjhjgvokdfyffwtncf/InstallerChoicesHelper_Prefix.pch.gch0#
+
+CTouch "/Users/larkost/Dropbox/Side Projects/InstallerChoicesHelper/build/Release/InstallerChoicesHelper.app"
+r0
+

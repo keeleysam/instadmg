@@ -352,7 +352,10 @@ if __name__ == "__main__":
 				print("\t\tCommand: " + " ".join(command))
 				
 				startTime = time.time()
-				subprocess.check_call(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+				process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+				if process.wait() != 0:
+					raise Exception('Processes: %s\nReturned: %i and output:\n%s\nAnd error: %s' % (' '.join(command), process.returncode, process.stdout.read(), process.stderr.read()))				
+				
 				print("\t\tConversion took: %s\n" % secondsToReadableTime(startTime - time.time()))
 				
 				asrTargetFile = None
@@ -384,11 +387,13 @@ if __name__ == "__main__":
 						asrInnerTargetFile = asrTargetFile
 					
 					print('\t\tASR scanning image %s' % scanOption['message'])
-					command = ['/usr/sbin/asr', 'imagescan'] + scanOption['command'] + [asrInnerTargetFile]
+					command = ['/usr/sbin/asr', 'imagescan'] + scanOption['command'] + ['--source', asrInnerTargetFile]
 					print('\t\t\tCommand: ' + ' '.join(command))
 					
 					startTime = time.time()
-					subprocess.check_call(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+					process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+					if process.wait() != 0:
+						raise Exception('Processes: %s\nReturned: %i and output:\n%s\nAnd error: %s' % (' '.join(command), process.returncode, process.stdout.read(), process.stderr.read()))
 					print("\t\t\tScan took: %s\n" % secondsToReadableTime(startTime - time.time()))
 					
 					# restore the image
@@ -398,7 +403,9 @@ if __name__ == "__main__":
 					print('\t\t\t\tCommand: ' + ' '.join(command))
 					
 					startTime = time.time()
-					subprocess.check_call(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+					process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+					if process.wait() != 0:
+						raise Exception('Processes: %s\nReturned: %i and output:\n%s\nAnd error: %s' % (' '.join(command), process.returncode, process.stdout.read(), process.stderr.read()))
 					print("\t\t\t\tRestore took: %s\n" % secondsToReadableTime(startTime - time.time()))
 					
 					# cleanup

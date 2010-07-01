@@ -3,7 +3,7 @@
 import subprocess, Foundation, time, math
 
 def bytesToRedableSize(sizeInBytes):
-	sizeInBytes = float(sizeInBytes)
+	sizeInBytes = float(math.fabs(sizeInBytes))
 	if sizeInBytes >= 1024*1024*1024*1024:
 		return '%.1f TiB' % (sizeInBytes / (1024*1024*1024*1024))
 	elif sizeInBytes >= 1024*1024*1024:
@@ -16,7 +16,7 @@ def bytesToRedableSize(sizeInBytes):
 		return '%.1f bytes' % sizeInBytes
 
 def secondsToReadableTime(seconds):
-	seconds = int(seconds)
+	seconds = int(math.fabs(seconds))
 	responce = ""
 	
 	hours = int(math.floor(float(seconds)/(60*60)))
@@ -46,13 +46,15 @@ def secondsToReadableTime(seconds):
 	
 	return responce.strip()
 
-def mountDMG(thisSourceFile, mountPoint=None):
+def mountDMG(thisSourceFile, mountPoint=None, shadowFile=None):
 	
 	# ToDo: handle the case when mountPoint is not given
 	
 	print('	Mounting: %s at %s' % (thisSourceFile, mountPoint))
 	
 	command = ['/usr/bin/hdiutil', 'attach', '-mountpoint', mountPoint, '-noverify', '-noautofsck', '-nobrowse', '-owners', 'on', '-readonly', '-plist', thisSourceFile]
+	if shadowFile is not None:
+		command += ['-shadow', shadowFile]
 	process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	if process.wait() != 0:
 		raise Exception('Unable to mount the image: %s\nCommand: %s\nOutput: %s\nError: %s' % (thisSourceFile, " ".join(command), process.stdout.read(), process.stderr.read()))
@@ -305,12 +307,14 @@ if __name__ == "__main__":
 	# create the tempMountPoint to mount the image to
 	tempMountPoint = tempfile.mkdtemp(suffix="-mountPoint", prefix=os.path.basename(sys.argv[0]), dir="/tmp")
 	
+	# create a tempfile for hdiutil to write onto
+	hdiutilOutfilePath = tempfile.mktemp(suffix=".dmg", prefix=os.path.basename(sys.argv[0]), dir="/tmp")
+	
+	# create a shadowfile location so we can fsck mounted images
+	shadowFileLocation = tempfile.mktemp(suffix=".shadow.dmg", prefix=os.path.basename(sys.argv[0]), dir="/tmp")
+	
 	# process things
 	for thisSourceFile in sourceFiles.keys():
-		
-		# create a tempfile for hdiutil to write onto
-		tempFileObject, hdiutilOutfilePath = tempfile.mkstemp(suffix=".dmg", prefix=os.path.basename(sys.argv[0]), dir="/tmp")
-		os.close(tempFileObject)
 		
 		# the source options to use
 		sourceOptions = [
@@ -329,8 +333,8 @@ if __name__ == "__main__":
 		
 		# asr scanning options
 		asrImagescanOptions = [
-			{"message":" without file checksums ", "command":[]},
-			{"message":" with file checksums ", "command":["--filechecksum"]}
+			{"message":"without file checksums ", "command":[]},
+			{"message":"with file checksums ", "command":["--filechecksum"]}
 			# ToDo: play with buffers
 		]
 		
@@ -340,7 +344,14 @@ if __name__ == "__main__":
 			print("\n" + thisSourceOption["message"] + "\n------------------")
 			
 			if "mountImage" in thisSourceOption and thisSourceOption["mountImage"] == True:
-				mountDMG(thisSourceFile, mountPoint=tempMountPoint)
+				mountDMG(thisSourceFile, mountPoint=tempMountPoint, shadowFile=shadowFileLocation)
+				
+				# fsck the file to rebuild the file catalog
+				#command = ['/sbin/fsck_hfs', '-r', tempMountPoint]
+				#print("\tfsck'ing command: " + " ".join(command))
+				#process = subprocess.Popen(command)
+				#if process.wait() != 0:
+				#	raise Exception('Processes: %s\nReturned: %i with output:\n%s\nAnd error: %s' % (' '.join(command), process.returncode, process.stdout.read(), process.stderr.read()))	
 			
 			for thisOutputOption in outputOptions:
 				
@@ -354,9 +365,9 @@ if __name__ == "__main__":
 				startTime = time.time()
 				process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 				if process.wait() != 0:
-					raise Exception('Processes: %s\nReturned: %i and output:\n%s\nAnd error: %s' % (' '.join(command), process.returncode, process.stdout.read(), process.stderr.read()))				
+					raise Exception('Processes: %s\nReturned: %i with output:\n%s\nAnd error: %s' % (' '.join(command), process.returncode, process.stdout.read(), process.stderr.read()))				
 				
-				print("\t\tConversion took: %s\n" % secondsToReadableTime(startTime - time.time()))
+				print("\t\tConversion took: %s\n" % secondsToReadableTime(time.time() - startTime))
 				
 				asrTargetFile = None
 				
@@ -370,6 +381,7 @@ if __name__ == "__main__":
 					tempFileObject, asrTargetFile = tempfile.mkstemp(suffix=".dmg", prefix=os.path.basename(sys.argv[0]), dir="/tmp")
 					os.close(tempFileObject)
 					
+					print('\n\t\tCopying: %s to %s' % (hdiutilOutfilePath, asrTargetFile))
 					shutil.copyfile(hdiutilOutfilePath, asrTargetFile)
 				
 				# asr scan the image
@@ -393,8 +405,15 @@ if __name__ == "__main__":
 					startTime = time.time()
 					process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 					if process.wait() != 0:
-						raise Exception('Processes: %s\nReturned: %i and output:\n%s\nAnd error: %s' % (' '.join(command), process.returncode, process.stdout.read(), process.stderr.read()))
-					print("\t\t\tScan took: %s\n" % secondsToReadableTime(startTime - time.time()))
+						print('\t\t\tASR scan failed, trying with the --allowfragmentedcatalog flag')
+						command = ['/usr/sbin/asr', 'imagescan'] + scanOption['command'] + ['--allowfragmentedcatalog', '--source', asrInnerTargetFile]
+						startTime = time.time()
+						process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+						
+						if process.wait() != 0:
+							raise Exception('Processes: %s\nReturned: %i with output:\n%s\nAnd error: %s' % (' '.join(command), process.returncode, process.stdout.read(), process.stderr.read()))
+					
+					print("\t\t\tScan took: %s\n" % secondsToReadableTime(time.time() - startTime))
 					
 					# restore the image
 					# ToDo: play with asr options more
@@ -405,8 +424,14 @@ if __name__ == "__main__":
 					startTime = time.time()
 					process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 					if process.wait() != 0:
-						raise Exception('Processes: %s\nReturned: %i and output:\n%s\nAnd error: %s' % (' '.join(command), process.returncode, process.stdout.read(), process.stderr.read()))
-					print("\t\t\t\tRestore took: %s\n" % secondsToReadableTime(startTime - time.time()))
+						print('\t\t\t\tASR restore failed, trying with the --allowfragmentedcatalog flag')
+						command = ['/usr/sbin/asr', 'restore', '--allowfragmentedcatalog', '--source', asrInnerTargetFile, '--target', restorePoint]
+						startTime = time.time()
+						process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+						
+						if process.wait() != 0:
+							raise Exception('Processes: %s\nReturned: %i with output:\n%s\nAnd error: %s' % (' '.join(command), process.returncode, process.stdout.read(), process.stderr.read()))
+					print("\t\t\t\tRestore took: %s\n" % secondsToReadableTime(time.time() - startTime))
 					
 					# cleanup
 					os.unlink(asrInnerTargetFile) # cleanup the innerTargetFile
@@ -415,6 +440,8 @@ if __name__ == "__main__":
 			
 			if "mountImage" in thisSourceOption and thisSourceOption["mountImage"] == True:
 				unmountDMG(tempMountPoint)
+				
+				os.unlink(shadowFileLocation)
 				
 	sys.exit(0)
 

@@ -1,14 +1,16 @@
 #summary One-sentence summary of this page.
-Thought process behind how and why of catalogs stay updated
+The current process applied to deciding on and updating the InstaUp2Date catalogs
 = Legwork =
 
-1. Restore the BaseOScache file per build(10.5.6, 10.6.3, 10.7.0 and newest Lion from the MacAppStore)
-2. Boot with no packages added/workflows applied(i.e., don't use deploystudio, just asr at the command line or Disk Utility) and run the gui swupdate manually
-3. Search/grep the install.log for the order in which the packages are applied(only 10.5 had a SoftwareUpdate log, but 'installed' is a good keyword to cut through the chaff)
-4. rinse and repeat until gui swupdate returns no packages
+  # Restore the BaseOScache file per build(10.5.6, 10.6.3, 10.7.0 and newest Lion from the MacAppStore)
+  # Boot with no packages added/workflows applied(i.e., don't use deploystudio, just asr at the command line or Disk Utility) and run the gui swupdate manually
+  # Search/grep the install.log for the order in which the packages are applied(only 10.5 had a SoftwareUpdate log, but 'installed' is a good keyword to cut through the chaff)
+  # Rinse and repeat until gui swupdate returns no packages
 
 = Putting it together =
 
 Then, after finding the updates on support.apple.com/downloads (or in the case of Safari and iTunes, download from their respective pages and right-click the entry in the downloads window and get the URL via Copy Address), checksum them and clean up the naming.  Two other things of note: 
-a. remove any superfluous(hardware/accessory-specific, EFI/firmware/thunderbolt) updates and 
-b. check iLife updates with the same gui manner on the most popular version of the OS(still Snow Leo as of this writing)
+  * remove any superfluous(hardware/accessory-specific, EFI/firmware/thunderbolt) updates and 
+  * check iLife updates with the same gui manner on the most popular version of the OS(still Snow Leo as of this writing)
+
+Feel free to post your results to the AFP548 forum, or the instadmg-dev mailing list

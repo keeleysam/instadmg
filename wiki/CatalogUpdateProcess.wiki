@@ -1,16 +1,17 @@
-#summary One-sentence summary of this page.
-The current process applied to deciding on and updating the InstaUp2Date catalogs
+#summary The current process applied to deciding on and updating the InstaUp2Date catalogs
 = Legwork =
 
   # Restore the BaseOScache file per build(10.5.6, 10.6.3, 10.7.0 and newest Lion from the MacAppStore)
-  # Boot with no packages added/workflows applied(i.e., don't use deploystudio, just asr at the command line or Disk Utility) and run the gui swupdate manually
+  # Boot with no packages added/workflows applied(i.e., don't use deploystudio, just asr at the command line or Disk Utility) and run the GUI Software Update application(from the Apple menu or /System/Library/CoreServices/Software Update.app) manually, installing all offered updates.
   # Search/grep the install.log for the order in which the packages are applied(only 10.5 had a SoftwareUpdate log, but 'installed' is a good keyword to cut through the chaff)
   # Rinse and repeat until gui swupdate returns no packages
 
 = Putting it together =
 
-Then, after finding the updates on support.apple.com/downloads (or in the case of Safari and iTunes, download from their respective pages and right-click the entry in the downloads window and get the URL via Copy Address), checksum them and clean up the naming.  Two other things of note: 
-  * remove any superfluous(hardware/accessory-specific, EFI/firmware/thunderbolt) updates and 
-  * check iLife updates with the same gui manner on the most popular version of the OS(still Snow Leo as of this writing)
+Then, after finding the updates on support.apple.com/downloads (or in the case of Safari and iTunes, download from their respective pages and right-click the entry in the downloads window and get the URL via Copy Address), checksum them (we recommend using the instadmg/AddOns/InstaUp2Date/checksum.py tool) and clean up the first field generated, the name, to make it more friendly/obvious.  Two other things of note: 
+  * remove any superfluous (hardware/accessory-specific, e.g. EFI/firmware/thunderbolt) updates and 
+  * check iLife updates with the same GUI manner on the most popular version of the OS (still Snow Leo as of this writing)
 
-Feel free to post your results to the AFP548 forum, or the instadmg-dev mailing list
+Feel free to post your results to the AFP548 forum, or the instadmg-dev mailing list, or Twitter with #instadmg or #instaUp2Date
+
+Thanks!

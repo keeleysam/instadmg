@@ -8,13 +8,15 @@
 
 = Putting it together =
 
-Then, after finding the updates on support.apple.com/downloads. In the case of Safari and iTunes, 
-  # download from their respective pages, 
+Then, find the updates on support.apple.com/downloads, and jump to step three, below. In the case of Safari and iTunes, 
+  # download from their respective pages
   # right-click the entry in the downloads window and 
-  # get the URL by choosing "Copy Address"), checksum them (we recommend using the instadmg/AddOns/InstaUp2Date/checksum.py tool) and clean up the first field generated, the name, to make it more friendly/obvious.  Two other things of note: 
-  * remove any updates that are hardware or accessory-specific, e.g. EFI/firmware/thunderbolt)  and 
+  # get the URL by choosing "Copy Address"). Checksum them (we recommend using the instadmg/AddOns/InstaUp2Date/checksum.py tool), and clean up the first field generated (the name), to make it more friendly/obvious.  Two other things of note: 
+  * leave out any updates that are hardware or accessory-specific, e.g. EFI/firmware/thunderbolt)  and 
   * for iLife, collect updates with the same manual process described above on the most popular version of the OS (still Snow Leo as of this writing)
 
 Feel free to post your results to the AFP548 forum, Twitter with #instadmg or #instaUp2Date hastags, or the instadmg-dev mailing list. 
+
+Keep in mind that updates should be allowed a 'cooling-off' period of at least 7 days, and ideally updated catalogs should be posted on the next Wednesday after that period.
 
 Thanks!

@@ -1,4 +1,5 @@
 #summary The current process applied to deciding on and updating the InstaUp2Date catalogs
+= Want to help? Send a mail to the dev list & mention that you've read this page =
 = Legwork =
 
   # Restore the BaseOScache file that you've created without installerchoices/choiceChanges per build(10.5.6, 10.6.3, 10.7.0 and newest Lion from the MacAppStore). Don't use DeployStudio for this, since it's difficult to suppress its firstboot cleanup scripts, just use asr at the command line or Disk Utility. This guarantees no packages will be added/workflows applied
